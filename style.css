@@ -213,8 +213,14 @@ body {
 /* Smooth transitions */
 .main-header,
 .welcome-section,
+.header-logo,
 .welcome-logo {
   transition: background-color 0.8s ease, filter 0.8s ease;
+}
+
+.header-logo,
+.welcome-logo {
+  transition: opacity 0.5s ease;
 }
 
 
