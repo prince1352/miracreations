@@ -230,7 +230,7 @@ body {
 .welcome-logo-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 250px; /* reduced by 50% */
   height: auto;
   margin-bottom: 1.5rem;
 }
