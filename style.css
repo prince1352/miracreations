@@ -139,7 +139,7 @@ body {
 }
 
 .quote-button:hover {
-  background-color: var(--purple);
+  background-color: transparent;
   color: var(--yellow);
   border-color: var(--yellow);
 }
