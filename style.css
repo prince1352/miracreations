@@ -94,10 +94,11 @@ body {
   background-color: var(--yellow);
   color: var(--black);
   border: 2px solid var(--yellow);
-  padding: 0.5rem 1.5rem; /* increased width */
+  padding: 0.5rem 1.7rem; /* increased width */
   border-radius: 6px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Segoe UI', sans-serif;
   font-size: 1.25rem; /* 25% larger text */
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -115,60 +116,63 @@ body {
 .welcome-section {
   background-color: var(--purple);
   color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
 .welcome-logo {
-  max-width: 200px;
+  max-width: 220px;
   width: 100%;
-  margin: 0 auto 2rem;
-  display: block;
 }
 
 .welcome-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .welcome-subtitle {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .scroll-indicator {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--yellow);
-  font-family: 'Segoe UI', sans-serif;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .scroll-indicator a {
   color: var(--yellow);
   text-decoration: none;
-  transition: transform 0.2s ease;
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease;
 }
 
 .scroll-indicator a:hover {
-  transform: translateY(3px);
+  transform: translateY(4px);
 }
 
 .down-arrow {
-  font-size: 1.2rem;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23f3ca4f' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12 16l-6-6h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-
-
 
 
 
