@@ -19,7 +19,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 2rem;
+  padding: 1.2rem 8rem;
   flex-wrap: wrap;
 }
 
@@ -27,11 +27,18 @@ body {
   display: flex;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.3s ease;
 }
 
 .header-left:hover {
-  transform: translateY(-3px);
+  transform: scale(1.05);
+}
+
+.header-left:visited,
+.header-left:link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo {
@@ -60,7 +67,7 @@ body {
 
 .main-nav {
   display: flex;
-  gap: 40px;
+  gap: 60px;
   font-family: 'Segoe UI', sans-serif; /* Light, clean font */
   font-weight: 300;
 }
