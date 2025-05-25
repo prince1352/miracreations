@@ -233,16 +233,14 @@ body {
   max-width: 250px; /* reduced by 50% */
   height: auto;
   margin-bottom: 1.5rem;
+  aspect-ratio: 1 / 1;
 }
 
 .welcome-logo-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   transition: opacity 1.2s ease;
+  position: absolute;
 }
-
 
 /* --------------------------------------------
                 WHY US SECTION
