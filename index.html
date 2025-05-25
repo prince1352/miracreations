@@ -33,10 +33,10 @@
 
   <!-- WELCOME SECTION -->
   <section class="welcome-section">
-    <div class="logo-container">
-      <img src="images/Logo-Purple.jpg" class="welcome-logo purple-logo" />
-      <img src="images/Logo-Black.jpg" class="welcome-logo black-logo" />
-    </div>
+   <div class="logo-container">
+  <img src="images/Logo-Purple.jpg" class="welcome-logo purple-logo" />
+  <img src="images/Logo-Black.jpg" class="welcome-logo black-logo" />
+   </div>
     <h1 class="welcome-title">Welcome to Mira Creations</h1>
     <h2 class="welcome-subtitle">Your trusted source for Premium Event Decor and Elegant Jewelry</h2>
     <div class="scroll-indicator">
@@ -82,18 +82,19 @@
   </script>
 
   <!-- Scroll Animation: Pop In Why Us Content -->
-  <script>
+ <script>
+  window.addEventListener('scroll', () => {
     const whyUsContent = document.querySelector('.why-us-content');
+    const triggerPoint = window.innerHeight * 0.8;
+    const contentTop = whyUsContent.getBoundingClientRect().top;
 
-    window.addEventListener('scroll', () => {
-      const triggerPoint = window.innerHeight * 0.8;
-      const contentTop = whyUsContent.getBoundingClientRect().top;
-
-      if (contentTop < triggerPoint) {
-        whyUsContent.classList.add('visible');
-      }
-    });
-  </script>
-
+    if (contentTop < triggerPoint) {
+      whyUsContent.classList.add('visible');
+    } else {
+      whyUsContent.classList.remove('visible'); // optional: hides again on scroll up
+    }
+  });
+</script>
+  
 </body>
 </html>
