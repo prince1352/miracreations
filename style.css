@@ -436,17 +436,6 @@ body {
   gap: 20px;
 }
 
-.contact-line {
-  flex: 1;
-  height: 2px;
-  background-color: white;
-}
-
-.contact-logo {
-  height: 60px;
-  width: auto;
-}
-
 /* Contact Form */
 .contact-form {
   display: flex;
@@ -502,5 +491,12 @@ body {
 .contact-content.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.contact-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 40px;
 }
 
