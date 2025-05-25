@@ -249,7 +249,7 @@ body {
 .why-us-section {
   background-color: var(--black);
   color: white;
-  min-height: 75vh;
+  min-height: auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -262,7 +262,7 @@ body {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 1s ease, transform 1s ease;
-  max-width: 600px;
+  max-width: 1200px;
 }
 
 .why-us-content.visible {
@@ -274,6 +274,7 @@ body {
   font-size: 2.2rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: var(--yellow);
 }
 
 .why-us-content p {
