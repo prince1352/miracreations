@@ -83,11 +83,7 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
   <div class="contact-content hidden">
-    <div class="contact-logo-wrapper">
-      <div class="contact-line"></div>
-      <img src="images/Logo-Purple.jpg" alt="Logo" class="contact-logo" />
-      <div class="contact-line"></div>
-    </div>
+    <h2 class="contact-title">Contact Us</h2>
 
     <form action="https://formsubmit.io/send/lakhbir-kv@hotmail.com" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -105,104 +101,85 @@
   </div>
 </section>
 
-  <!-- Scroll Animation: Header/Welome Background + Logo Crossfade -->
-  <script>
-    const header = document.querySelector('.main-header');
-    const welcome = document.querySelector('.welcome-section');
-    const purpleLogos = document.querySelectorAll('.purple-logo');
-    const blackLogos = document.querySelectorAll('.black-logo');
+<!-- Scripts -->
+<script>
+  const header = document.querySelector('.main-header');
+  const welcome = document.querySelector('.welcome-section');
+  const services = document.querySelector('#services');
+  const contactSection = document.querySelector('#contact');
+  const whyUsContent = document.querySelector('.why-us-content');
+  const specializeContent = document.querySelector('.specialize-content');
+  const contactContent = document.querySelector('.contact-content');
+  const purpleLogos = document.querySelectorAll('.purple-logo');
+  const blackLogos = document.querySelectorAll('.black-logo');
 
-    const scrollRange = 400;
+  const scrollRange = 400;
 
-    window.addEventListener('scroll', () => {
-      const scrollY = Math.min(window.scrollY, scrollRange);
-      const progress = scrollY / scrollRange;
-
-      const blend = (start, end, p) => Math.round(start + (end - start) * p);
-      const purple = [76, 66, 153];
-      const black = [37, 35, 40];
-      const bgColor = `rgb(${blend(purple[0], black[0], progress)}, ${blend(purple[1], black[1], progress)}, ${blend(purple[2], black[2], progress)})`;
-
-      header.style.backgroundColor = bgColor;
-      welcome.style.backgroundColor = bgColor;
-
-      purpleLogos.forEach(logo => logo.style.opacity = 1 - progress);
-      blackLogos.forEach(logo => logo.style.opacity = progress);
-    });
-  </script>
-
-  <!-- Scroll Animation: Pop In Why Us Content -->
- <script>
   window.addEventListener('scroll', () => {
-    const whyUsContent = document.querySelector('.why-us-content');
-    const triggerPoint = window.innerHeight * 0.8;
-    const contentTop = whyUsContent.getBoundingClientRect().top;
+    const scrollY = window.scrollY;
+    const progress = Math.min(scrollY / scrollRange, 1);
 
-    if (contentTop < triggerPoint) {
+    // --- Initial Logo & Background Transition (Welcome to Services scroll) ---
+    const blend = (start, end, p) => Math.round(start + (end - start) * p);
+    const purpleRGB = [76, 66, 153];
+    const blackRGB = [37, 35, 40];
+    const bgColor = `rgb(${blend(purpleRGB[0], blackRGB[0], progress)}, ${blend(purpleRGB[1], blackRGB[1], progress)}, ${blend(purpleRGB[2], blackRGB[2], progress)})`;
+
+    header.style.backgroundColor = bgColor;
+    welcome.style.backgroundColor = bgColor;
+    purpleLogos.forEach(logo => logo.style.opacity = 1 - progress);
+    blackLogos.forEach(logo => logo.style.opacity = progress);
+
+    // --- Section Fade-ins ---
+    const triggerPoint = window.innerHeight * 0.8;
+
+    if (whyUsContent.getBoundingClientRect().top < triggerPoint) {
       whyUsContent.classList.add('visible');
     } else {
-      whyUsContent.classList.remove('visible'); // optional: hides again on scroll up
+      whyUsContent.classList.remove('visible');
     }
-  });
-</script>
-  
- <!-- Scroll Animation: Pop In Services Content -->
-<script>
-  const specializeContent = document.querySelector('.specialize-content');
 
-  window.addEventListener('scroll', () => {
-    const triggerPoint = window.innerHeight * 0.8;
-    const contentTop = specializeContent.getBoundingClientRect().top;
-
-    if (contentTop < triggerPoint) {
+    if (specializeContent.getBoundingClientRect().top < triggerPoint) {
       specializeContent.classList.add('visible');
     } else {
-      specializeContent.classList.remove('visible'); // Optional for fade-out
+      specializeContent.classList.remove('visible');
     }
-  });
-</script>
 
-<script>
-  const contactContent = document.querySelector('.contact-content');
-  const contactSection = document.querySelector('#contact');
-
-  window.addEventListener('scroll', () => {
-    const contactTop = contactContent.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.8;
-
-    // Show content animation
-    if (contactTop < triggerPoint) {
+    if (contactContent.getBoundingClientRect().top < triggerPoint) {
       contactContent.classList.add('visible');
     } else {
       contactContent.classList.remove('visible');
     }
 
-    // Background and logo transition logic
-    const header = document.querySelector('.main-header');
-    const services = document.querySelector('#services');
-    const welcome = document.querySelector('.welcome-section');
-    const purpleLogos = document.querySelectorAll('.purple-logo');
-    const blackLogos = document.querySelectorAll('.black-logo');
-
-    const scrollY = window.scrollY;
-    const contactStart = contactSection.offsetTop - 200;
+    // --- Contact Section Overrides (Header/Background/Logo) ---
+    const contactStart = contactSection.offsetTop - window.innerHeight * 0.5;
     const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
+    const servicesStart = services.offsetTop - window.innerHeight * 0.5;
 
     if (scrollY >= contactStart && scrollY <= contactEnd) {
       header.style.backgroundColor = 'var(--purple)';
-      services.style.backgroundColor = 'var(--purple)';
       welcome.style.backgroundColor = 'var(--purple)';
+      services.style.backgroundColor = 'var(--purple)';
+      purpleLogos.forEach(logo => logo.style.opacity = 1);
+      blackLogos.forEach(logo => logo.style.opacity = 0);
+    } else if (scrollY < servicesStart) {
+      // Scrolled back up to Welcome
+      header.style.backgroundColor = 'var(--purple)';
+      welcome.style.backgroundColor = 'var(--purple)';
+      services.style.backgroundColor = 'var(--black)';
       purpleLogos.forEach(logo => logo.style.opacity = 1);
       blackLogos.forEach(logo => logo.style.opacity = 0);
     } else {
+      // Between services and contact
       header.style.backgroundColor = 'var(--black)';
-      services.style.backgroundColor = 'var(--black)';
       welcome.style.backgroundColor = 'var(--black)';
+      services.style.backgroundColor = 'var(--black)';
       purpleLogos.forEach(logo => logo.style.opacity = 0);
       blackLogos.forEach(logo => logo.style.opacity = 1);
     }
   });
 </script>
+
 
   
 </body>
