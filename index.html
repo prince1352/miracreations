@@ -57,11 +57,11 @@
 
 
 <!-- SERVICES SECTION -->
-<section id="services" class="specialize-section hidden">
-  <div class="specialize-content">
+<section id="services" class="specialize-section">
+  <div class="specialize-content hidden"> <!-- Animation applied here -->
     <div class="specialize-logo-wrapper">
       <div class="specialize-line"></div>
-      <img src="images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+      <img src="images/Logo-W.png" alt="Logo" class="specialize-logo" />
       <div class="specialize-line"></div>
     </div>
 
@@ -76,7 +76,7 @@
       <div class="card" style="background-image: url('images/Card6.jpg');"><span>Table & Centrepiece Styling</span></div>
     </div>
 
-    <a href="products.html" class="specialize-button">See What We Offer</a>
+     <a href="products.html" class="specialize-button">Check Out Our Gallery</a>
   </div>
 </section>
 
@@ -123,16 +123,16 @@
   
  <!-- Scroll Animation: Pop In Services Content -->
 <script>
-  const servicesSection = document.querySelector('#services');
+  const specializeContent = document.querySelector('.specialize-content');
 
   window.addEventListener('scroll', () => {
     const triggerPoint = window.innerHeight * 0.8;
-    const sectionTop = servicesSection.getBoundingClientRect().top;
+    const contentTop = specializeContent.getBoundingClientRect().top;
 
-    if (sectionTop < triggerPoint) {
-      servicesSection.classList.add('visible');
+    if (contentTop < triggerPoint) {
+      specializeContent.classList.add('visible');
     } else {
-      servicesSection.classList.remove('visible'); // Optional: fade out again
+      specializeContent.classList.remove('visible'); // Optional for fade-out
     }
   });
 </script>
