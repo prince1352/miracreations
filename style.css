@@ -119,7 +119,7 @@ body {
 .welcome-section {
   background-color: var(--purple);
   color: white;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -189,7 +189,7 @@ body {
 .why-us-section {
   background-color: var(--black);
   color: white;
-  min-height: 100vh;
+  min-height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,17 +210,14 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* Smooth transitions */
 .main-header,
-.welcome-section,
-.header-logo,
-.welcome-logo {
-  transition: background-color 0.8s ease, filter 0.8s ease;
+.welcome-section {
+  transition: background-color 0.2s ease;
 }
 
-.header-logo,
-.welcome-logo {
-  transition: opacity 0.5s ease;
+.welcome-logo,
+.header-logo {
+  transition: opacity 0.4s ease;
 }
 
 
