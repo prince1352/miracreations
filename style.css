@@ -182,8 +182,40 @@ body {
   margin: 0;
 }
 
+/* --------------------------------------------
+                WHY US SECTION
+----------------------------------------------*/
 
+.why-us-section {
+  background-color: var(--black);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
 
+.why-us-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
+.why-us-content p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Smooth transitions */
+.main-header,
+.welcome-section,
+.welcome-logo {
+  transition: background-color 0.8s ease, filter 0.8s ease;
+}
 
 
 
