@@ -13,12 +13,12 @@
 
   <header class="main-header">
     <a href="index.html" class="header-left">
-      <img src="images/Logo-Purple.jpg" alt="MiraCreations Logo" class="logo" />
-      <div class="brand-text">
-        <div class="brand-title">MIRA CREATIONS</div>
-        <div class="brand-subtitle">JEWELRY AND DECOR</div>
-      </div>
-    </a>
+  <img src="images/Logo-Purple.jpg" alt="MiraCreations Logo" class="logo header-logo" />
+  <div class="brand-text">
+    <div class="brand-title">MIRA CREATIONS</div>
+    <div class="brand-subtitle">JEWELRY AND DECOR</div>
+  </div>
+</a>
     <nav class="main-nav">
       <a href="#about">About Us</a>
       <a href="#gallery">Gallery</a>
@@ -62,26 +62,30 @@
 <script>
   const header = document.querySelector('.main-header');
   const welcome = document.querySelector('.welcome-section');
-  const logo = document.querySelector('.welcome-logo');
+  const welcomeLogo = document.querySelector('.welcome-logo');
+  const headerLogo = document.querySelector('.header-logo');
   const whyUs = document.querySelector('#why-us');
 
   window.addEventListener('scroll', () => {
-    const triggerPoint = whyUs.offsetTop - window.innerHeight / 2;
     const scrollY = window.scrollY;
+    const triggerPoint = 1; // starts on first scroll
 
     if (scrollY >= triggerPoint) {
-      // Transition to black
+      // Fade to black theme
       header.style.backgroundColor = 'var(--black)';
       welcome.style.backgroundColor = 'var(--black)';
-      logo.src = 'images/Logo-Black.jpg';
+      if (welcomeLogo) welcomeLogo.src = 'images/Logo-Black.jpg';
+      if (headerLogo) headerLogo.src = 'images/Logo-Black.jpg';
     } else {
-      // Reset to purple
+      // Reset to purple theme
       header.style.backgroundColor = 'var(--purple)';
       welcome.style.backgroundColor = 'var(--purple)';
-      logo.src = 'images/Logo-Purple.jpg';
+      if (welcomeLogo) welcomeLogo.src = 'images/Logo-Purple.jpg';
+      if (headerLogo) headerLogo.src = 'images/Logo-Purple.jpg';
     }
   });
 </script>
+
 
   
 </body>
