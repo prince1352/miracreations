@@ -64,27 +64,39 @@
   const welcome = document.querySelector('.welcome-section');
   const welcomeLogo = document.querySelector('.welcome-logo');
   const headerLogo = document.querySelector('.header-logo');
-  const whyUs = document.querySelector('#why-us');
+
+  const scrollRange = 400; // pixels to complete the transition
 
   window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const triggerPoint = 1; // starts on first scroll
+    const scrollY = Math.min(window.scrollY, scrollRange);
+    const progress = scrollY / scrollRange; // 0 to 1
 
-    if (scrollY >= triggerPoint) {
-      // Fade to black theme
-      header.style.backgroundColor = 'var(--black)';
-      welcome.style.backgroundColor = 'var(--black)';
-      if (welcomeLogo) welcomeLogo.src = 'images/Logo-Black.jpg';
-      if (headerLogo) headerLogo.src = 'images/Logo-Black.jpg';
-    } else {
-      // Reset to purple theme
-      header.style.backgroundColor = 'var(--purple)';
-      welcome.style.backgroundColor = 'var(--purple)';
-      if (welcomeLogo) welcomeLogo.src = 'images/Logo-Purple.jpg';
-      if (headerLogo) headerLogo.src = 'images/Logo-Purple.jpg';
+    // Interpolate color from purple to black
+    const purple = [76, 66, 153]; // RGB for #4c4299
+    const black = [37, 35, 40];   // RGB for #252328 (used instead of true black for style)
+
+    const blend = (start, end, p) => Math.round(start + (end - start) * p);
+    const bgColor = `rgb(${blend(purple[0], black[0], progress)}, ${blend(purple[1], black[1], progress)}, ${blend(purple[2], black[2], progress)})`;
+
+    header.style.backgroundColor = bgColor;
+    welcome.style.backgroundColor = bgColor;
+
+    // Logo transition (fade purple out, black in)
+    if (welcomeLogo && headerLogo) {
+      welcomeLogo.style.opacity = 1 - progress;
+      headerLogo.style.opacity = 1 - progress;
+
+      if (progress > 0.5) {
+        welcomeLogo.src = 'images/Logo-Black.jpg';
+        headerLogo.src = 'images/Logo-Black.jpg';
+      } else {
+        welcomeLogo.src = 'images/Logo-Purple.jpg';
+        headerLogo.src = 'images/Logo-Purple.jpg';
+      }
     }
   });
 </script>
+
 
 
   
