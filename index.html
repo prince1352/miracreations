@@ -80,6 +80,31 @@
   </div>
 </section>
 
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-content hidden">
+    <div class="contact-logo-wrapper">
+      <div class="contact-line"></div>
+      <img src="images/Logo-Purple.jpg" alt="Logo" class="contact-logo" />
+      <div class="contact-line"></div>
+    </div>
+
+    <form action="https://formsubmit.io/send/lakhbir-kv@hotmail.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="What do you need?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p><strong>Phone:</strong> 587-709-0058</p>
+      <p><strong>Email:</strong> lakhbir-kv@hotmail.com</p>
+      <p><strong>Instagram:</strong> @miracreations1</p>
+    </div>
+  </div>
+</section>
+
   <!-- Scroll Animation: Header/Welome Background + Logo Crossfade -->
   <script>
     const header = document.querySelector('.main-header');
@@ -133,6 +158,48 @@
       specializeContent.classList.add('visible');
     } else {
       specializeContent.classList.remove('visible'); // Optional for fade-out
+    }
+  });
+</script>
+
+<script>
+  const contactContent = document.querySelector('.contact-content');
+  const contactSection = document.querySelector('#contact');
+
+  window.addEventListener('scroll', () => {
+    const contactTop = contactContent.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.8;
+
+    // Show content animation
+    if (contactTop < triggerPoint) {
+      contactContent.classList.add('visible');
+    } else {
+      contactContent.classList.remove('visible');
+    }
+
+    // Background and logo transition logic
+    const header = document.querySelector('.main-header');
+    const services = document.querySelector('#services');
+    const welcome = document.querySelector('.welcome-section');
+    const purpleLogos = document.querySelectorAll('.purple-logo');
+    const blackLogos = document.querySelectorAll('.black-logo');
+
+    const scrollY = window.scrollY;
+    const contactStart = contactSection.offsetTop - 200;
+    const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
+
+    if (scrollY >= contactStart && scrollY <= contactEnd) {
+      header.style.backgroundColor = 'var(--purple)';
+      services.style.backgroundColor = 'var(--purple)';
+      welcome.style.backgroundColor = 'var(--purple)';
+      purpleLogos.forEach(logo => logo.style.opacity = 1);
+      blackLogos.forEach(logo => logo.style.opacity = 0);
+    } else {
+      header.style.backgroundColor = 'var(--black)';
+      services.style.backgroundColor = 'var(--black)';
+      welcome.style.backgroundColor = 'var(--black)';
+      purpleLogos.forEach(logo => logo.style.opacity = 0);
+      blackLogos.forEach(logo => logo.style.opacity = 1);
     }
   });
 </script>
