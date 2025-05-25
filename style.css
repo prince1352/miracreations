@@ -383,8 +383,8 @@ body {
 .specialize-button {
   display: inline-block;
   padding: 14px 32px;
-  background-color: var(--red);
-  color: #fff;
+  background-color: var(--yellow);
+  color: var(--black);
   font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
@@ -395,7 +395,7 @@ body {
 
 .specialize-button:hover {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
 }
 
