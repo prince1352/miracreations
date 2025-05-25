@@ -144,6 +144,22 @@ body {
   border-color: var(--yellow);
 }
 
+.header-logo-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.header-logo-container .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: auto;
+  transition: opacity 1.2s ease;
+}
+
 /* --------------------------------------------
                 WELCOME SECTION
 ----------------------------------------------*/
@@ -211,6 +227,23 @@ body {
   background-size: contain;
 }
 
+.welcome-logo-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-logo-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1.2s ease;
+}
+
+
 /* --------------------------------------------
                 WHY US SECTION
 ----------------------------------------------*/
@@ -248,4 +281,14 @@ body {
 .why-us-content p {
   font-size: 1.1rem;
   font-weight: 300;
+}
+
+.purple-logo {
+  z-index: 2;
+  opacity: 1;
+}
+
+.black-logo {
+  z-index: 1;
+  opacity: 0;
 }
