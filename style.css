@@ -152,7 +152,7 @@ body {
   transition: background-color 0.2s ease;
 }
 
-.logo-container .welcome-logo {
+.welcome-logo {
   max-width: 220px;
   width: 100%;
   transition: opacity 1.2s ease;
