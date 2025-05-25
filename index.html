@@ -5,20 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MiraCreations</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- HEADER AND MENU -->
-
   <header class="main-header">
     <a href="index.html" class="header-left">
-  <img src="images/Logo-Purple.jpg" alt="MiraCreations Logo" class="logo header-logo" />
-  <div class="brand-text">
-    <div class="brand-title">MIRA CREATIONS</div>
-    <div class="brand-subtitle">JEWELRY AND DECOR</div>
-  </div>
-</a>
+      <div class="logo-container">
+        <img src="images/Logo-Purple.jpg" class="logo header-logo purple-logo" />
+        <img src="images/Logo-Black.jpg" class="logo header-logo black-logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">MIRA CREATIONS</div>
+        <div class="brand-subtitle">JEWELRY AND DECOR</div>
+      </div>
+    </a>
     <nav class="main-nav">
       <a href="#about">About Us</a>
       <a href="#gallery">Gallery</a>
@@ -31,74 +32,68 @@
   </header>
 
   <!-- WELCOME SECTION -->
-  
   <section class="welcome-section">
-  <img src="images/Logo-Purple.jpg" alt="MiraCreations Logo" class="welcome-logo" />
-  
-  <h1 class="welcome-title">Welcome to Mira Creations</h1>
-  
-  <h2 class="welcome-subtitle">
-    Your trusted source for Premium Event Decor and Elegant Jewelry
-  </h2>
-  
-  <div class="scroll-indicator">
-    <a href="#services">
-      <span>Scroll to see our Services</span>
-      <span class="down-arrow">&#x25BC;</span> <!-- Unicode for down arrow -->
-    </a>
-  </div>
-</section>
-  
-<!-- WHY US SECTION -->
-  
- <section id="why-us" class="why-us-section">
-  <div class="why-us-content">
-    <h2>Why Choose Us</h2>
-    <p>We deliver premium quality, personalized service, and timeless elegance.</p>
-  </div>
-</section>
+    <div class="logo-container">
+      <img src="images/Logo-Purple.jpg" class="welcome-logo purple-logo" />
+      <img src="images/Logo-Black.jpg" class="welcome-logo black-logo" />
+    </div>
+    <h1 class="welcome-title">Welcome to Mira Creations</h1>
+    <h2 class="welcome-subtitle">Your trusted source for Premium Event Decor and Elegant Jewelry</h2>
+    <div class="scroll-indicator">
+      <a href="#services">
+        <span>Scroll to see our Services</span>
+        <span class="down-arrow">&#x25BC;</span>
+      </a>
+    </div>
+  </section>
 
-<!-- Scroll Annimation Script -->
-<script>
-  const header = document.querySelector('.main-header');
-  const welcome = document.querySelector('.welcome-section');
-  const welcomeLogo = document.querySelector('.welcome-logo');
-  const headerLogo = document.querySelector('.header-logo');
+  <!-- WHY US SECTION -->
+  <section id="why-us" class="why-us-section">
+    <div class="why-us-content hidden">
+      <h2>Why Choose Us</h2>
+      <p>We deliver premium quality, personalized service, and timeless elegance.</p>
+    </div>
+  </section>
 
-  const scrollRange = 400; // pixels to complete the transition
+  <!-- Scroll Animation: Header/Welome Background + Logo Crossfade -->
+  <script>
+    const header = document.querySelector('.main-header');
+    const welcome = document.querySelector('.welcome-section');
+    const purpleLogos = document.querySelectorAll('.purple-logo');
+    const blackLogos = document.querySelectorAll('.black-logo');
 
-  window.addEventListener('scroll', () => {
-    const scrollY = Math.min(window.scrollY, scrollRange);
-    const progress = scrollY / scrollRange; // 0 to 1
+    const scrollRange = 400;
 
-    // Interpolate color from purple to black
-    const purple = [76, 66, 153]; // RGB for #4c4299
-    const black = [37, 35, 40];   // RGB for #252328 (used instead of true black for style)
+    window.addEventListener('scroll', () => {
+      const scrollY = Math.min(window.scrollY, scrollRange);
+      const progress = scrollY / scrollRange;
 
-    const blend = (start, end, p) => Math.round(start + (end - start) * p);
-    const bgColor = `rgb(${blend(purple[0], black[0], progress)}, ${blend(purple[1], black[1], progress)}, ${blend(purple[2], black[2], progress)})`;
+      const blend = (start, end, p) => Math.round(start + (end - start) * p);
+      const purple = [76, 66, 153];
+      const black = [37, 35, 40];
+      const bgColor = `rgb(${blend(purple[0], black[0], progress)}, ${blend(purple[1], black[1], progress)}, ${blend(purple[2], black[2], progress)})`;
 
-    header.style.backgroundColor = bgColor;
-    welcome.style.backgroundColor = bgColor;
+      header.style.backgroundColor = bgColor;
+      welcome.style.backgroundColor = bgColor;
 
-    // Logo transition (fade purple out, black in)
-    if (welcomeLogo && headerLogo) {
-      welcomeLogo.style.opacity = 1 - progress;
-      headerLogo.style.opacity = 1 - progress;
+      purpleLogos.forEach(logo => logo.style.opacity = 1 - progress);
+      blackLogos.forEach(logo => logo.style.opacity = progress);
+    });
+  </script>
 
-      if (progress > 0.5) {
-        welcomeLogo.src = 'images/Logo-Black.jpg';
-        headerLogo.src = 'images/Logo-Black.jpg';
-      } else {
-        welcomeLogo.src = 'images/Logo-Purple.jpg';
-        headerLogo.src = 'images/Logo-Purple.jpg';
+  <!-- Scroll Animation: Pop In Why Us Content -->
+  <script>
+    const whyUsContent = document.querySelector('.why-us-content');
+
+    window.addEventListener('scroll', () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      const contentTop = whyUsContent.getBoundingClientRect().top;
+
+      if (contentTop < triggerPoint) {
+        whyUsContent.classList.add('visible');
       }
-    }
-  });
-</script>
+    });
+  </script>
 
-
-
-  
 </body>
 </html>
