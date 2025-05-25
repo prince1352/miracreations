@@ -58,7 +58,31 @@
   </div>
 </section>
 
+<!-- Scroll Annimation Script -->
+<script>
+  const header = document.querySelector('.main-header');
+  const welcome = document.querySelector('.welcome-section');
+  const logo = document.querySelector('.welcome-logo');
+  const whyUs = document.querySelector('#why-us');
 
-    
+  window.addEventListener('scroll', () => {
+    const triggerPoint = whyUs.offsetTop - window.innerHeight / 2;
+    const scrollY = window.scrollY;
+
+    if (scrollY >= triggerPoint) {
+      // Transition to black
+      header.style.backgroundColor = 'var(--black)';
+      welcome.style.backgroundColor = 'var(--black)';
+      logo.src = 'images/Logo-Black.jpg';
+    } else {
+      // Reset to purple
+      header.style.backgroundColor = 'var(--purple)';
+      welcome.style.backgroundColor = 'var(--purple)';
+      logo.src = 'images/Logo-Purple.jpg';
+    }
+  });
+</script>
+
+  
 </body>
 </html>
