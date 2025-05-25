@@ -116,47 +116,73 @@
   const purpleRGB = [76, 66, 153];
   const blackRGB = [37, 35, 40];
 
-  // Blend color from purple to black based on a ratio
-  const blendColor = (start, end, progress) =>
-    `rgb(
+  function blendColor(start, end, progress) {
+    return `rgb(
       ${Math.round(start[0] + (end[0] - start[0]) * progress)},
       ${Math.round(start[1] + (end[1] - start[1]) * progress)},
       ${Math.round(start[2] + (end[2] - start[2]) * progress)}
     )`;
+  }
+
+  function getSectionProgress(start, end, scrollY) {
+    if (scrollY <= start) return 0;
+    if (scrollY >= end) return 1;
+    return (scrollY - start) / (end - start);
+  }
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
-    const transitionBuffer = windowHeight * 0.6; // how far before/after a section to begin/end transition
 
-    const contactTop = contact.offsetTop;
-    const contactEnd = contactTop + contact.offsetHeight;
+    // --- Transition Zones ---
+    const welcomeStart = 0;
+    const welcomeEnd = welcome.offsetHeight;
 
-    // FADE IN OUT based on scroll position near Contact
-    const fadeStart = contactTop - transitionBuffer;
-    const fadeEnd = contactTop + transitionBuffer;
+    const servicesStart = services.offsetTop - windowHeight / 2;
+    const servicesEnd = services.offsetTop + services.offsetHeight;
 
-    let progress = 0;
+    const contactStart = contact.offsetTop - windowHeight / 2;
+    const contactEnd = contact.offsetTop + contact.offsetHeight;
 
-    if (scrollY < fadeStart) {
-      progress = 0; // full black
-    } else if (scrollY > fadeEnd) {
-      progress = 1; // full purple
-    } else {
-      progress = (scrollY - fadeStart) / (fadeEnd - fadeStart); // gradual blend
+    let progress;
+
+    // --- Determine which zone we're in and apply blended styles ---
+
+    if (scrollY < servicesStart) {
+      // In Welcome → Why Us transition
+      progress = getSectionProgress(welcomeStart, servicesStart, scrollY);
+      const color = blendColor(purpleRGB, blackRGB, progress);
+      header.style.backgroundColor = color;
+      welcome.style.backgroundColor = color;
+      services.style.backgroundColor = color;
+      purpleLogos.forEach(logo => (logo.style.opacity = 1 - progress));
+      blackLogos.forEach(logo => (logo.style.opacity = progress));
+    } else if (scrollY >= servicesStart && scrollY < contactStart) {
+      // In Services zone (fully black)
+      header.style.backgroundColor = 'var(--black)';
+      welcome.style.backgroundColor = 'var(--black)';
+      services.style.backgroundColor = 'var(--black)';
+      purpleLogos.forEach(logo => (logo.style.opacity = 0));
+      blackLogos.forEach(logo => (logo.style.opacity = 1));
+    } else if (scrollY >= contactStart && scrollY <= contactEnd) {
+      // In Services → Contact transition
+      progress = getSectionProgress(contactStart, contactEnd, scrollY);
+      const color = blendColor(blackRGB, purpleRGB, progress);
+      header.style.backgroundColor = color;
+      welcome.style.backgroundColor = color;
+      services.style.backgroundColor = color;
+      purpleLogos.forEach(logo => (logo.style.opacity = progress));
+      blackLogos.forEach(logo => (logo.style.opacity = 1 - progress));
+    } else if (scrollY > contactEnd) {
+      // Fully in Contact
+      header.style.backgroundColor = 'var(--purple)';
+      welcome.style.backgroundColor = 'var(--purple)';
+      services.style.backgroundColor = 'var(--purple)';
+      purpleLogos.forEach(logo => (logo.style.opacity = 1));
+      blackLogos.forEach(logo => (logo.style.opacity = 0));
     }
 
-    // Apply blended background
-    const blendedColor = blendColor(blackRGB, purpleRGB, progress);
-    header.style.backgroundColor = blendedColor;
-    welcome.style.backgroundColor = blendedColor;
-    services.style.backgroundColor = blendedColor;
-
-    // Apply logo fade
-    purpleLogos.forEach(logo => (logo.style.opacity = progress));
-    blackLogos.forEach(logo => (logo.style.opacity = 1 - progress));
-
-    // Fade in content sections
+    // --- Animate Content Sections ---
     const triggerPoint = windowHeight * 0.8;
 
     if (whyUsContent.getBoundingClientRect().top < triggerPoint) {
