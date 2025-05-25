@@ -1,1 +1,87 @@
+:root {
+  --purple: #4c4299;
+  --yellow: #f3ca4f;
+  --black: #252328;
+}
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #fff;
+}
+
+.main-header {
+  background-color: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  margin-right: 1rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  color: var(--yellow);
+}
+
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.brand-subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--yellow);
+  transform: scale(1.1);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.quote-button {
+  background-color: var(--yellow);
+  color: var(--black);
+  border: 2px solid var(--yellow);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-button:hover {
+  background-color: var(--purple);
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
 
