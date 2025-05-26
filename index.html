@@ -176,6 +176,10 @@
     services.style.backgroundColor = blendedColor;
     contact.style.backgroundColor = blendedColor;
 
+    document.querySelectorAll('.section-divider').forEach(divider => {
+      divider.style.backgroundColor = blendedColor;
+    });
+
     // Logo opacity swap
     purpleLogos.forEach(logo => (logo.style.opacity = 1 - finalProgress));
     blackLogos.forEach(logo => (logo.style.opacity = finalProgress));
