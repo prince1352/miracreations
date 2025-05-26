@@ -10,6 +10,14 @@ body {
   background-color: #fff;
 }
 
+.main-header,
+.welcome-section,
+.why-us-section,
+.specialize-section,
+.contact-section {
+  transition: background-color 0.4s ease;
+}
+
 /* --------------------------------------------
                 HEADER AND MENU
 ----------------------------------------------*/
