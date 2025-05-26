@@ -560,22 +560,7 @@ body {
   padding: 0;
 }
 
-.contact-float-group {
-  position: fixed;
-  top: 33%;
-  right: 0;
-  display: flex;
-  z-index: 1002;
-  transition: transform 0.5s ease, right 0.5s ease, top 0.5s ease;
-}
-
-.contact-float-group.open {
-  top: 50%;
-  left: 50%;
-  right: auto;
-  transform: translate(-50%, -50%);
-}
-
+/* Overlay */
 .contact-overlay {
   position: fixed;
   top: 0;
@@ -584,6 +569,9 @@ body {
   height: 100vh;
   background: rgba(20, 20, 20, 0.7);
   backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -679,5 +667,3 @@ body {
 .why-us-content h2 {
   margin-top: 0;
 }
-
-
