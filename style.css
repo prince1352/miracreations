@@ -532,11 +532,11 @@ body {
 
 /* Arrow image: aligned and scaled */
 .contact-arrow-image {
-  height: calc(130px * 1.25); /* 1.25x tab height */
-  width: auto;
-  margin-right: 0;
+  width: calc(44px * 1.2);   /* 1.2x width of the tab */
+  height: calc(130px * 1.2); /* 1.2x height of the tab */
   object-fit: contain;
   display: block;
+  margin-right: 0;
 }
 
 /* Text above the image */
