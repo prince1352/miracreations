@@ -313,15 +313,6 @@ body {
   text-align: center;
 }
 
-/* Logo Line Row */
-.specialize-logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  gap: 20px;
-}
-
 /* Section Title */
 .specialize-title {
   font-size: 2rem;
@@ -416,15 +407,6 @@ body {
 .contact-content {
   max-width: 100%;
   margin: 0 auto;
-}
-
-/* Logo Line Row */
-.contact-logo-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
-  gap: 20px;
 }
 
 /* Contact Form */
