@@ -103,7 +103,6 @@
   
   <!-- Scripts -->
 <script>
-  // Your scroll transition script (already in your file)
   const header = document.querySelector('.main-header');
   const welcome = document.querySelector('.welcome-section');
   const whyUs = document.querySelector('#why-us');
@@ -132,17 +131,19 @@
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
 
-    const whyUsStart = whyUs.offsetTop - vh;
-    const whyUsEnd = whyUs.offsetTop + whyUs.offsetHeight;
+    // 🎯 Black transition completes when Why Us is centered
+    const whyUsCenter = whyUs.offsetTop + whyUs.offsetHeight / 2 - vh / 2;
+    const whyUsStart = whyUsCenter - vh / 3;
+    const whyUsEnd = whyUsCenter + vh / 3;
 
+    // 🎯 Purple transition completes before end of Contact
     const contactStart = contact.offsetTop - vh;
-    const contactEnd = contact.offsetTop + contact.offsetHeight;
+    const contactEnd = contactStart + vh / 2;
 
-    let progressToBlack = getProgress(whyUsStart, whyUsEnd, scrollY);
-    let progressToPurple = getProgress(contactStart, contactEnd, scrollY);
+    const progressToBlack = getProgress(whyUsStart, whyUsEnd, scrollY);
+    const progressToPurple = getProgress(contactStart, contactEnd, scrollY);
 
     let finalProgress = 0;
-
     if (scrollY < contactStart) {
       finalProgress = progressToBlack;
     } else {
@@ -150,19 +151,20 @@
     }
 
     const blendedColor = blendColor(purpleRGB, blackRGB, finalProgress);
+
+    // Apply blended background to all main sections
     header.style.backgroundColor = blendedColor;
     welcome.style.backgroundColor = blendedColor;
     whyUs.style.backgroundColor = blendedColor;
     services.style.backgroundColor = blendedColor;
     contact.style.backgroundColor = blendedColor;
 
-    purpleLogos.forEach(logo => logo.style.opacity = 1 - finalProgress);
-    blackLogos.forEach(logo => logo.style.opacity = finalProgress);
+    // Logo opacity swap
+    purpleLogos.forEach(logo => (logo.style.opacity = 1 - finalProgress));
+    blackLogos.forEach(logo => (logo.style.opacity = finalProgress));
   });
-</script>
 
-<!-- ✨ New: Show content on scroll -->
-<script>
+  // ✨ Reveal hidden content on scroll
   const hiddenElements = document.querySelectorAll('.hidden');
 
   const observer = new IntersectionObserver((entries) => {
@@ -176,8 +178,9 @@
     threshold: 0.1
   });
 
-  hiddenElements.forEach((el) => observer.observe(el));
+  hiddenElements.forEach(el => observer.observe(el));
 </script>
+
 
 
   
