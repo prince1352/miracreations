@@ -511,6 +511,102 @@ body {
 }
 
 /* --------------------------------------------
+                FLOATING TAB
+----------------------------------------------*/
+
+/* Floating Tab Button */
+.floating-tab {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 14px 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.floating-tab:hover {
+  background-color: var(--purple);
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+}
+
+/* Slide-out Contact Card */
+.contact-slideout {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: white;
+  color: var(--black);
+  padding: 30px 25px;
+  width: 320px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.contact-slideout.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Header */
+.slideout-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.slideout-logo {
+  height: 40px;
+}
+
+#closeSlideout {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* Content */
+.slideout-content h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: var(--purple);
+}
+
+.slideout-content p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.slideout-content a {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.slideout-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------------
             MAIN PAGE COMBINED CODE
 ----------------------------------------------*/
 
