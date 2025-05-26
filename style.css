@@ -507,134 +507,105 @@ body {
                 FLOATING TAB
 ----------------------------------------------*/
 
-/* Contact Ribbon */
-.contact-ribbon-wrapper {
+/* Floating Tab + Label */
+.contact-tab-wrapper {
   position: fixed;
   top: 33%;
   right: 0;
   display: flex;
   align-items: center;
-  z-index: 1000;
+  gap: 12px;
+  z-index: 1001;
+  cursor: pointer;
 }
 
-.ribbon-label {
+.contact-arrow {
+  height: 60px;
+  transform: rotate(0deg);
+  filter: invert(1); /* makes it white */
+}
+
+.contact-label {
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 0.9rem;
-  color: white;
-  margin-right: 8px;
-  font-weight: 500;
   opacity: 0.8;
 }
 
-.ribbon-arrow {
-  font-size: 1.2rem;
-  color: white;
-  margin-right: 4px;
-  animation: floatArrow 2s ease-in-out infinite;
-}
-
-@keyframes floatArrow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-.floating-ribbon {
+.contact-tab {
   background-color: var(--yellow);
-  width: 46px;
-  height: 140px;
+  width: 44px;
+  height: 130px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  cursor: pointer;
-  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
-.floating-ribbon:hover {
-  transform: scale(1.05);
-}
-
-
-/* Slide-in Panel */
-.contact-slidein {
+/* Overlay */
+.contact-overlay {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 340px;
-  max-width: 90%;
+  left: 0;
+  width: 100vw;
   height: 100vh;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  color: var(--black);
-  box-shadow: -6px 0 20px rgba(0, 0, 0, 0.3);
-  padding: 24px;
-  z-index: 999;
-  transition: right 0.4s ease;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(6px);
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.contact-slidein.active {
-  right: 0;
-}
-
-.slidein-header {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.contact-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Popup Card */
+.contact-popup {
+  background-color: white;
+  padding: 30px 24px;
+  border-radius: 12px;
+  width: 320px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.contact-popup h3 {
+  color: var(--purple);
   margin-bottom: 1rem;
 }
 
-.slidein-logo {
-  height: 40px;
-}
-
-#closeSlideout {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--black);
-  cursor: pointer;
-}
-
-.slidein-content h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.25rem;
-  color: var(--purple);
-}
-
-.slidein-content p {
-  font-size: 0.95rem;
+.contact-popup p {
   margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
 
-.slidein-content a {
+.contact-popup a {
   color: var(--purple);
   text-decoration: none;
 }
 
-.slidein-content a:hover {
+.contact-popup a:hover {
   text-decoration: underline;
-}
-
-/* Social Icons */
-.social-icons {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 16px;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) saturate(100%) invert(18%) sepia(84%) saturate(3893%) hue-rotate(249deg) brightness(96%) contrast(99%);
-  transition: transform 0.2s ease;
-}
-
-.social-icons img:hover {
-  transform: scale(1.1);
 }
 
 
