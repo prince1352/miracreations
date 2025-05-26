@@ -10,14 +10,6 @@ body {
   background-color: #fff;
 }
 
-.main-header,
-.welcome-section,
-.why-us-section,
-.specialize-section,
-.contact-section {
-  transition: background-color 0.4s ease;
-}
-
 /* --------------------------------------------
                 HEADER AND MENU
 ----------------------------------------------*/
@@ -181,7 +173,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem;
   text-align: center;
   transition: background-color 0.2s ease;
 }
@@ -262,7 +253,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   text-align: center;
-  padding: 6rem 2rem 2rem;
   position: relative;
 }
 
@@ -298,7 +288,6 @@ body {
 .specialize-section {
   position: relative;
   background-color: var(--black);
-  padding: 100px 10% 80px;
   color: #fff;
   overflow: hidden;
 }
@@ -415,7 +404,6 @@ body {
 
 .contact-section {
   background-color: var(--purple);
-  padding: 100px 10% 80px;
   color: #fff;
   text-align: center;
   overflow: hidden;
@@ -497,5 +485,24 @@ body {
   font-weight: 600;
   color: #fff;
   margin-bottom: 40px;
+}
+
+/* --------------------------------------------
+                MAIN PAGE COMBINED CODE
+----------------------------------------------*/
+
+.main-header,
+.welcome-section,
+.why-us-section,
+.specialize-section,
+.contact-section {
+  transition: background-color 0.4s ease;
+}
+
+.welcome-section,
+.why-us-section,
+.specialize-section,
+.contact-section {
+  padding: 20px 20% 20px;
 }
 
