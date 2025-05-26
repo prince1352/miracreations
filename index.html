@@ -216,6 +216,8 @@
     purpleLogos.forEach(logo => (logo.style.opacity = 1 - finalProgress));
     blackLogos.forEach(logo => (logo.style.opacity = finalProgress));
   });
+
+  window.dispatchEvent(new Event('scroll'));
 </script>
 
 <script>
