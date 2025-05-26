@@ -513,27 +513,31 @@ body {
   top: 33%;
   right: 0;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
   z-index: 1001;
   cursor: pointer;
 }
 
-.contact-arrow {
-  height: 60px;
-  transform: rotate(0deg);
-  filter: invert(1); /* makes it white */
-}
-
-.contact-label {
+.contact-label-horizontal {
   color: white;
   font-weight: 500;
   font-size: 0.95rem;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  opacity: 0.8;
+  margin-right: 100px; /* aligns over the arrow start */
+  margin-bottom: 4px;
+  text-align: center;
+  opacity: 0.85;
 }
 
+/* Straight Arrow */
+.contact-arrow {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Yellow Tab */
 .contact-tab {
   background-color: var(--yellow);
   width: 44px;
@@ -607,7 +611,6 @@ body {
 .contact-popup a:hover {
   text-decoration: underline;
 }
-
 
 /* --------------------------------------------
             MAIN PAGE COMBINED CODE
