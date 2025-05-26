@@ -198,7 +198,6 @@ body {
 .scroll-indicator {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   font-size: 1rem;
   font-weight: 300;
   font-family: 'Segoe UI', sans-serif;
@@ -503,6 +502,6 @@ body {
 .why-us-section,
 .specialize-section,
 .contact-section {
-  padding: 20px 10% 20px;
+  padding: 30px 15% 30px;
 }
 
