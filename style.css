@@ -516,7 +516,7 @@ body {
   justify-content: center;
   gap: 20px;
   padding: 0px 15%;
-  background-color: var(--black);
+  background-color: transparent;
 }
 
 .specialize-line {
