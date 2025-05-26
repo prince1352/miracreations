@@ -515,7 +515,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 0; /* no vertical gap */
   z-index: 1001;
   cursor: pointer;
 }
@@ -524,24 +524,23 @@ body {
   color: white;
   font-weight: 500;
   font-size: 0.95rem;
-  margin-right: 100px; /* aligns over the arrow start */
-  margin-bottom: 4px;
+  margin-right: 60px; /* aligns with new shorter arrow start */
+  margin-bottom: 0;
   text-align: center;
   opacity: 0.85;
+  line-height: 1.2;
 }
 
-/* Straight Arrow */
 .contact-arrow {
   height: 60px;
   width: auto;
   margin-right: 8px;
 }
 
-/* Yellow Tab */
 .contact-tab {
   background-color: var(--yellow);
   width: 44px;
-  height: 130px;
+  height: 60px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.25);
