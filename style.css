@@ -508,7 +508,6 @@ body {
                 FLOATING TAB
 ----------------------------------------------*/
 
-/* Floating Tab + Label */
 .contact-tab-wrapper {
   position: fixed;
   top: 33%;
@@ -516,35 +515,40 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0; /* no vertical gap */
+  gap: 0;
   z-index: 1001;
   cursor: pointer;
 }
 
-.contact-label-horizontal {
-  color: white;
-  font-weight: 500;
-  font-size: 0.95rem;
-  margin-right: 60px; /* aligns with new shorter arrow start */
-  margin-bottom: 0;
-  text-align: center;
-  opacity: 0.85;
-  line-height: 1.2;
-}
-
-.contact-arrow {
-  height: 60px;
-  width: auto;
-  margin-right: 8px;
-}
-
+/* Yellow tab remains the same */
 .contact-tab {
   background-color: var(--yellow);
   width: 44px;
-  height: 60px;
+  height: 130px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* Arrow image: aligned and scaled */
+.contact-arrow-image {
+  height: calc(130px * 1.25); /* 1.25x tab height */
+  width: auto;
+  margin-right: 0;
+  object-fit: contain;
+  display: block;
+}
+
+/* Text above the image */
+.contact-label-over-arrow {
+  font-family: 'Bradley Hand', cursive;
+  font-style: italic;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 4px;
+  margin-right: 60px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /* Overlay */
