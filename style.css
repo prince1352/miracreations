@@ -475,7 +475,43 @@ body {
 }
 
 /* --------------------------------------------
-                MAIN PAGE COMBINED CODE
+          FOOTER SECTION
+----------------------------------------------*/
+
+.site-footer {
+  background-color: var(--black);
+  color: white;
+  text-align: center;
+  padding: 30px 10%;
+  font-size: 0.95rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--yellow);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* --------------------------------------------
+            MAIN PAGE COMBINED CODE
 ----------------------------------------------*/
 
 .main-header,
