@@ -168,7 +168,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 85vh;
+  min-height: 90vh;
   background-color: var(--purple);
   color: white;
   padding-left: 15%;
