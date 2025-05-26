@@ -128,10 +128,19 @@
 
 <!-- Floating Contact Ribbon + Arrow -->
 <div class="contact-tab-wrapper" id="contactTab">
-  <img src="images/arrow-white.png" alt="Arrow" class="contact-arrow" />
-  <span class="contact-label">Contact Information</span>
+  <!-- Contact Info Label above arrow start -->
+  <div class="contact-label-horizontal">Contact Information</div>
+
+  <!-- Arrow SVG -->
+  <svg class="contact-arrow" width="100" height="60" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,20 Q10,50 25,48 H85" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" />
+    <polyline points="85,42 100,48 85,54" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <!-- Yellow Tab -->
   <div class="contact-tab"></div>
 </div>
+
 
 <!-- Overlay and Popup Card -->
 <div class="contact-overlay" id="contactOverlay">
