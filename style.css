@@ -448,13 +448,6 @@ body {
   border: 2px solid var(--yellow);
 }
 
-/* Contact Info */
-.contact-info p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 /* Scroll-triggered animation */
 .contact-content.hidden {
   opacity: 0;
