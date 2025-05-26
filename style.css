@@ -269,10 +269,10 @@ body {
 }
 
 .why-us-content h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  color: var(--yellow);
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: 500;
+  color: white;
 }
 
 .why-us-content p {
@@ -503,6 +503,6 @@ body {
 .why-us-section,
 .specialize-section,
 .contact-section {
-  padding: 20px 20% 20px;
+  padding: 20px 10% 20px;
 }
 
