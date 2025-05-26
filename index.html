@@ -128,13 +128,13 @@
 
 <!-- Floating Contact Ribbon + Arrow -->
 <div class="contact-tab-wrapper" id="contactTab">
-  <div class="contact-label-horizontal">Contact Information</div>
+  <!-- Contact Label on top of arrow.png -->
+  <div class="contact-label-over-arrow">Contact Information</div>
 
-  <svg class="contact-arrow" width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0,20 Q8,50 18,48 H45" stroke="white" stroke-width="4" fill="none" stroke-linecap="round" />
-    <polyline points="45,42 60,48 45,54" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
+  <!-- Replaces SVG arrow with image -->
+  <img src="images/arrow.png" class="contact-arrow-image" alt="Arrow">
 
+  <!-- Yellow tab remains the same -->
   <div class="contact-tab"></div>
 </div>
 
