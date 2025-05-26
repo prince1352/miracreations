@@ -105,110 +105,60 @@
 <script>
   const header = document.querySelector('.main-header');
   const welcome = document.querySelector('.welcome-section');
+  const whyUs = document.querySelector('#why-us');
   const services = document.querySelector('#services');
   const contact = document.querySelector('#contact');
-  const whyUsContent = document.querySelector('.why-us-content');
-  const specializeContent = document.querySelector('.specialize-content');
-  const contactContent = document.querySelector('.contact-content');
   const purpleLogos = document.querySelectorAll('.purple-logo');
   const blackLogos = document.querySelectorAll('.black-logo');
 
   const purpleRGB = [76, 66, 153];
   const blackRGB = [37, 35, 40];
 
-  function blendColor(start, end, progress) {
-    return `rgb(
+  const blendColor = (start, end, progress) =>
+    `rgb(
       ${Math.round(start[0] + (end[0] - start[0]) * progress)},
       ${Math.round(start[1] + (end[1] - start[1]) * progress)},
       ${Math.round(start[2] + (end[2] - start[2]) * progress)}
     )`;
-  }
 
-  function getSectionProgress(start, end, scrollY) {
+  const getProgress = (start, end, scrollY) => {
     if (scrollY <= start) return 0;
     if (scrollY >= end) return 1;
     return (scrollY - start) / (end - start);
-  }
+  };
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const windowHeight = window.innerHeight;
+    const vh = window.innerHeight;
 
-    // -----------------------------
-    // Transition zones
-    // -----------------------------
+    const whyUsStart = whyUs.offsetTop - vh;
+    const whyUsEnd = whyUs.offsetTop + whyUs.offsetHeight;
 
-    const welcomeStart = 0;
-    const welcomeEnd = welcome.offsetHeight;
-
-    const servicesStart = services.offsetTop - windowHeight * 0.3; // triggered sooner
-    const servicesEnd = services.offsetTop + services.offsetHeight;
-
-    const contactStart = contact.offsetTop - windowHeight * 0.4; // accelerated transition
+    const contactStart = contact.offsetTop - vh;
     const contactEnd = contact.offsetTop + contact.offsetHeight;
 
-    let progress;
+    let progressToBlack = getProgress(whyUsStart, whyUsEnd, scrollY);
+    let progressToPurple = getProgress(contactStart, contactEnd, scrollY);
 
-    // -----------------------------
-    // Background & Logo transitions
-    // -----------------------------
+    // Combine both transitions
+    let finalProgress = 0;
 
-    if (scrollY < servicesStart) {
-      // Welcome → Services
-      progress = getSectionProgress(welcomeStart, servicesStart, scrollY);
-      const color = blendColor(purpleRGB, blackRGB, progress);
-      header.style.backgroundColor = color;
-      welcome.style.backgroundColor = color;
-      services.style.backgroundColor = color;
-      purpleLogos.forEach(logo => (logo.style.opacity = 1 - progress));
-      blackLogos.forEach(logo => (logo.style.opacity = progress));
-    } else if (scrollY >= servicesStart && scrollY < contactStart) {
-      // Inside Services zone
-      header.style.backgroundColor = 'var(--black)';
-      welcome.style.backgroundColor = 'var(--black)';
-      services.style.backgroundColor = 'var(--black)';
-      purpleLogos.forEach(logo => (logo.style.opacity = 0));
-      blackLogos.forEach(logo => (logo.style.opacity = 1));
-    } else if (scrollY >= contactStart && scrollY <= contactEnd) {
-      // Services → Contact
-      progress = getSectionProgress(contactStart, contactEnd, scrollY);
-      const color = blendColor(blackRGB, purpleRGB, progress);
-      header.style.backgroundColor = color;
-      welcome.style.backgroundColor = color;
-      services.style.backgroundColor = color;
-      purpleLogos.forEach(logo => (logo.style.opacity = progress));
-      blackLogos.forEach(logo => (logo.style.opacity = 1 - progress));
-    } else if (scrollY > contactEnd) {
-      // Fully in Contact
-      header.style.backgroundColor = 'var(--purple)';
-      welcome.style.backgroundColor = 'var(--purple)';
-      services.style.backgroundColor = 'var(--purple)';
-      purpleLogos.forEach(logo => (logo.style.opacity = 1));
-      blackLogos.forEach(logo => (logo.style.opacity = 0));
-    }
-
-    // -----------------------------
-    // Fade in content sections
-    // -----------------------------
-    const triggerPoint = windowHeight * 0.8;
-
-    if (whyUsContent.getBoundingClientRect().top < triggerPoint) {
-      whyUsContent.classList.add('visible');
+    if (scrollY < contactStart) {
+      finalProgress = progressToBlack;
     } else {
-      whyUsContent.classList.remove('visible');
+      finalProgress = 1 - progressToPurple;
     }
 
-    if (specializeContent.getBoundingClientRect().top < triggerPoint) {
-      specializeContent.classList.add('visible');
-    } else {
-      specializeContent.classList.remove('visible');
-    }
+    // Blend and apply
+    const blendedColor = blendColor(purpleRGB, blackRGB, finalProgress);
+    header.style.backgroundColor = blendedColor;
+    welcome.style.backgroundColor = blendedColor;
+    whyUs.style.backgroundColor = blendedColor;
+    services.style.backgroundColor = blendedColor;
+    contact.style.backgroundColor = blendedColor;
 
-    if (contactContent.getBoundingClientRect().top < triggerPoint) {
-      contactContent.classList.add('visible');
-    } else {
-      contactContent.classList.remove('visible');
-    }
+    purpleLogos.forEach(logo => logo.style.opacity = 1 - finalProgress);
+    blackLogos.forEach(logo => logo.style.opacity = finalProgress);
   });
 </script>
 
