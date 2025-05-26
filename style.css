@@ -402,6 +402,7 @@ body {
   color: #fff;
   text-align: center;
   overflow: hidden;
+  padding: 80px 15% 30px;
 }
 
 .contact-content {
@@ -624,8 +625,7 @@ body {
 }
 
 .why-us-section,
-.specialize-section,
-.contact-section {
+.specialize-section {
   padding: 80px 15% 80px;
 }
 
