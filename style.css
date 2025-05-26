@@ -182,7 +182,7 @@ body {
 }
 
 .welcome-footer-spacer {
-  height: 80px; /* fixed space at bottom */
+  height: 100px; /* fixed space at bottom */
 }
 
 .welcome-content {
