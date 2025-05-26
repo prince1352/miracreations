@@ -61,7 +61,7 @@
 
 <!-- WHY US SECTION -->
 <section id="why-us" class="why-us-section">
-  <div class="why-us-content hidden">
+  <div class="why-us-content">
     <h2 class="specialize-title">Why Choose Us</h2>
     <p>At Mira Creations, we specialize in bringing your vision to life with thoughtfully curated decor and jewelry. Whether you're planning a wedding, cultural celebration, or special event, we provide personalized service, premium craftsmanship, and timeless designs that reflect your style. With a deep understanding of tradition and a flair for the modern, we make every detail count, so you can focus on making memories.</p>
   </div>
@@ -76,7 +76,7 @@
 
 <!-- SERVICES SECTION -->
 <section id="services" class="specialize-section">
-  <div class="specialize-content hidden">
+  <div class="specialize-content">
     <h2 class="specialize-title">We Specialize In</h2>
 
     <div class="specialize-cards">
@@ -101,7 +101,7 @@
 
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
-  <div class="contact-content hidden">
+  <div class="contact-content">
     <h2 class="specialize-title">Contact Us</h2>
 
     <form action="https://formsubmit.io/send/lakhbir-kv@hotmail.com" method="POST" class="contact-form">
@@ -216,22 +216,6 @@
     purpleLogos.forEach(logo => (logo.style.opacity = 1 - finalProgress));
     blackLogos.forEach(logo => (logo.style.opacity = finalProgress));
   });
-
-  // ✨ Reveal hidden content on scroll
-  const hiddenElements = document.querySelectorAll('.hidden');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        entry.target.classList.remove('hidden');
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  hiddenElements.forEach(el => observer.observe(el));
 </script>
 
 <script>
