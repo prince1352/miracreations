@@ -535,8 +535,8 @@ body {
   align-items: flex-end;
   justify-content: flex-end; /* aligns image bottom with tab */
   height: 130px; /* same as .contact-tab */
-  margin-right: 0;
   padding-right: 0;
+  margin-right: 5px;
 }
 
 .contact-label-over-arrow {
