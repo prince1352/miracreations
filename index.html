@@ -126,23 +126,30 @@
   </div>
 </footer>
 
-<!-- FLOATING CONTACT TAB -->
-<div class="floating-tab" id="contactTab">
-  <span>Contact</span>
+<!-- Contact Ribbon Tab -->
+<div class="contact-ribbon-wrapper">
+  <span class="ribbon-label">Contact Info</span>
+  <span class="ribbon-arrow">➰</span>
+  <div class="floating-ribbon" id="contactTab"></div>
 </div>
 
-<!-- SLIDING CONTACT CARD -->
-<div class="contact-slideout" id="contactSlideout">
-  <div class="slideout-header">
-    <img src="images/Logo-Purple.png" alt="Mira Creations Logo" class="slideout-logo" />
+<!-- Slide-in Contact Panel -->
+<div class="contact-slidein" id="contactSlideout">
+  <div class="slidein-header">
+    <img src="images/Logo-Purple.png" alt="Mira Creations Logo" class="slidein-logo" />
     <button id="closeSlideout">&times;</button>
   </div>
-  <div class="slideout-content">
+  <div class="slidein-content">
     <h3>Mira Creations</h3>
     <p><strong>Location:</strong> Edmonton, Alberta</p>
-    <p><strong>Phone:</strong> 587-709-0058</p>
+    <p><strong>Phone:</strong> <a href="tel:5877090058">587-709-0058</a></p>
     <p><strong>Email:</strong> <a href="mailto:lakhbir-kv@hotmail.com">lakhbir-kv@hotmail.com</a></p>
     <p><strong>Instagram:</strong> <a href="https://instagram.com/miracreations1" target="_blank">@miracreations1</a></p>
+    <div class="social-icons">
+      <a href="https://instagram.com/miracreations1" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+      <a href="mailto:lakhbir-kv@hotmail.com"><img src="images/email.svg" alt="Email"></a>
+      <a href="tel:5877090058"><img src="images/phone.svg" alt="Phone"></a>
+    </div>
   </div>
 </div>
 
@@ -242,9 +249,11 @@
     slideout.classList.remove('active');
   });
 
-  // Optional: close slideout if clicked outside
+  // Optional: close on click outside
   window.addEventListener('click', (e) => {
-    if (slideout.classList.contains('active') && !slideout.contains(e.target) && !tab.contains(e.target)) {
+    if (slideout.classList.contains('active') &&
+        !slideout.contains(e.target) &&
+        !tab.contains(e.target)) {
       slideout.classList.remove('active');
     }
   });
