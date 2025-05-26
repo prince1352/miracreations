@@ -272,15 +272,9 @@ body {
 }
 
 .why-us-content {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
   max-width: 1200px;
-}
-
-.why-us-content.visible {
-  opacity: 1;
-  transform: translateY(0);
+  margin: 0 auto;
+  text-align: center;
 }
 
 .why-us-content h2 {
