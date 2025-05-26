@@ -175,7 +175,10 @@ body {
   text-align: center;
   transition: background-color 0.2s ease;
   min-height: 85vh;
+  padding: 30px 15% 30px;   
+  margin-top: 5vh;        
 }
+
 
 .welcome-logo {
   max-width: 500px;
@@ -459,6 +462,7 @@ body {
 .contact-form button:hover {
   background-color: transparent;
   color: var(--yellow);
+  border: 2px solid var(--yellow);
 }
 
 /* Contact Info */
