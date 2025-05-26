@@ -83,3 +83,18 @@
     <p><strong>Instagram:</strong> <a href="https://instagram.com/miracreations1" target="_blank">@miracreations1</a></p>
   </div>
 </div>
+
+<script>
+  const contactTab = document.getElementById('contactTab');
+  const contactOverlay = document.getElementById('contactOverlay');
+
+  contactTab.addEventListener('click', () => {
+    contactOverlay.classList.add('active');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
+      contactOverlay.classList.remove('active');
+    }
+  });
+</script>
