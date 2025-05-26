@@ -182,7 +182,7 @@ body {
 }
 
 .welcome-footer-spacer {
-  height: 60px; /* fixed space at bottom */
+  height: 80px; /* fixed space at bottom */
 }
 
 .welcome-content {
@@ -489,7 +489,7 @@ body {
 .why-us-section,
 .specialize-section,
 .contact-section {
-  padding: 60px 15% 60px;
+  padding: 80px 15% 80px;
 }
 
 .section-divider {
