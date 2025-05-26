@@ -128,19 +128,20 @@
 </footer>
 
 <!-- Floating Contact Ribbon + Arrow -->
-<div class="contact-tab-wrapper" id="contactTab">
-  <!-- Label + Arrow inside their own wrapper -->
-  <div class="contact-arrow-wrapper">
-    <div class="contact-label-over-arrow">Contact Information</div>
-    <img src="images/arrow.png" class="contact-arrow-image" alt="Arrow" />
-  </div>
+<div class="contact-float-group" id="contactFloatGroup">
+  <div class="contact-tab-wrapper" id="contactTab">
+    <!-- Label + Arrow inside their own wrapper -->
+    <div class="contact-arrow-wrapper">
+      <div class="contact-label-over-arrow">Contact Information</div>
+      <img src="images/arrow.png" class="contact-arrow-image" alt="Arrow" />
+    </div>
 
-  <!-- The yellow clickable tab -->
-  <div class="contact-tab"></div>
+    <!-- The yellow clickable tab -->
+    <div class="contact-tab"></div>
+  </div>
 </div>
 
-
-<!-- Overlay and Popup Card -->
+<!-- Overlay and Popup Card (outside the tab group) -->
 <div class="contact-overlay" id="contactOverlay">
   <div class="contact-popup">
     <h3>Contact Information</h3>
@@ -235,19 +236,48 @@
 </script>
 
 <script>
+  const contactGroup = document.getElementById('contactFloatGroup');
   const contactTab = document.getElementById('contactTab');
-  const contactOverlay = document.getElementById('contactOverlay');
+  const overlay = document.getElementById('contactOverlay');
 
-  contactTab.addEventListener('click', () => {
-    contactOverlay.classList.add('active');
+  // Function to open the contact popup
+  function openContactPopup() {
+    contactGroup.classList.add('open');
+    overlay.classList.add('active');
+  }
+
+  // Function to close it
+  function closeContactPopup() {
+    contactGroup.classList.remove('open');
+    overlay.classList.remove('active');
+  }
+
+  // Basic click to open
+  contactTab.addEventListener('click', openContactPopup);
+
+  // Close on overlay click
+  overlay.addEventListener('click', closeContactPopup);
+
+  // Optional: basic drag-to-open effect
+  let isDragging = false;
+  let startX = 0;
+
+  contactTab.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
   });
 
-  window.addEventListener('click', (e) => {
-    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
-      contactOverlay.classList.remove('active');
+  document.addEventListener('mouseup', (e) => {
+    if (isDragging) {
+      const draggedDistance = startX - e.clientX;
+      if (draggedDistance > 30) {
+        openContactPopup(); // Treat as drag to open
+      }
+      isDragging = false;
     }
   });
 </script>
+
 
 
   
