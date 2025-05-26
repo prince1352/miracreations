@@ -322,17 +322,6 @@ body {
   gap: 20px;
 }
 
-.specialize-line {
-  flex: 1;
-  height: 2px;
-  background-color: white;
-}
-
-.specialize-logo {
-  height: 60px;
-  width: auto;
-}
-
 /* Section Title */
 .specialize-title {
   font-size: 2rem;
@@ -520,4 +509,25 @@ body {
 .contact-section {
   padding: 60px 15% 60px;
 }
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 15%;
+  background-color: var(--black);
+}
+
+.specialize-line {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+}
+
+.specialize-logo {
+  height: 60px;
+  width: auto;
+}
+
 
