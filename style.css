@@ -165,20 +165,19 @@ body {
 ----------------------------------------------*/
 
 .welcome-section {
-  background-color: var(--purple);
-  color: white;
+  min-height: 85vh;
+  padding-bottom: 60px;
+  padding-left: 15%;
+  padding-right: 15%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
   text-align: center;
+  background-color: var(--purple);
+  color: white;
   transition: background-color 0.2s ease;
-  min-height: 85vh;
-  padding: 30px 15% 30px;   
-  margin-top: 5vh;        
 }
-
 
 .welcome-logo {
   max-width: 500px;
@@ -503,10 +502,9 @@ body {
   transition: background-color 0.4s ease;
 }
 
-.welcome-section,
 .why-us-section,
 .specialize-section,
 .contact-section {
-  padding: 30px 15% 30px;
+  padding: 60px 15% 60px;
 }
 
