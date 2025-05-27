@@ -234,5 +234,66 @@
   showSlide(currentSlide);
 </script>
 
+<!-- TRANSITION BACKGROUND COLOR SCRIPT -->  
+  <script>
+  const header = document.querySelector('.main-header');
+  const founder = document.querySelector('.founder-section');
+  const testimonials = document.querySelector('.testimonial-carousel');
+  const gallery = document.querySelector('.gallery-cta-section');
+  const contact = document.querySelector('#contact');
+  const dividers = document.querySelectorAll('.section-divider');
+
+  const purpleRGB = [76, 66, 153];   // var(--purple)
+  const blackRGB = [37, 35, 40];     // var(--black)
+
+  // Blend two RGB colors based on progress (0 to 1)
+  const blendColor = (start, end, progress) =>
+    `rgb(
+      ${Math.round(start[0] + (end[0] - start[0]) * progress)},
+      ${Math.round(start[1] + (end[1] - start[1]) * progress)},
+      ${Math.round(start[2] + (end[2] - start[2]) * progress)}
+    )`;
+
+  // Get progress between two scroll positions
+  const getProgress = (start, end, scrollY) => {
+    if (scrollY <= start) return 0;
+    if (scrollY >= end) return 1;
+    return (scrollY - start) / (end - start);
+  };
+
+  // Set initial color to --black on load
+  const blackColor = getComputedStyle(document.documentElement).getPropertyValue('--black');
+  [header, founder, testimonials, gallery, contact].forEach(section => {
+    section.style.backgroundColor = blackColor;
+  });
+  dividers.forEach(div => {
+    div.style.backgroundColor = blackColor;
+  });
+
+  // Scroll-based transition
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+
+    const startTransition = gallery.offsetTop;
+    const endTransition = contact.offsetTop + contact.offsetHeight - vh;
+
+    const progress = getProgress(startTransition, endTransition, scrollY);
+    const blendedColor = blendColor(blackRGB, purpleRGB, progress);
+
+    [header, founder, testimonials, gallery, contact].forEach(section => {
+      section.style.backgroundColor = blendedColor;
+    });
+
+    dividers.forEach(div => {
+      div.style.backgroundColor = blendedColor;
+    });
+  });
+
+  // Trigger scroll once on page load
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+
 </body>
 </html>
