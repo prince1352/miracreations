@@ -742,6 +742,20 @@ body {
 ----------------------------------------------*/
 
 @media screen and (max-width: 1200px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 768px) {
   .main-header {
     padding: 1rem 1.5rem;
     flex-wrap: nowrap;
@@ -760,23 +774,11 @@ body {
     font-size: 0.75rem;
   }
 
-  .main-nav {
-    display: none;
-  }
-
   .header-right {
-  flex: 1;
-  justify-content: center;
-  position: relative;
-}
-
-.hamburger {
-  display: flex;
-  position: absolute;
-  right: 1rem; /* ensures it hugs the far right inside header */
-  top: 50%;
-  transform: translateY(-50%);
-}
+    flex: 1;
+    justify-content: center;
+    position: relative;
+  }
 
   .quote-button {
     padding: 0.4rem 1rem;
