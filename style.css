@@ -1051,6 +1051,51 @@ body {
     position: relative;
   }
 
+   .welcome-section {
+    padding: 60px 5% 40px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .welcome-title {
+    font-size: 2rem;
+  }
+
+  .welcome-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .welcome-logo-container {
+    max-width: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .scroll-indicator {
+    font-size: 0.9rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .scroll-indicator .down-arrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .welcome-footer-spacer {
+    height: 60px;
+  }
+
+  .why-us-content h2 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+  }
+
+  .why-us-content p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .specialize-cards {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1068,6 +1113,29 @@ body {
   .specialize-button {
     font-size: 1rem;
     padding: 12px 24px;
+  }
+
+  .contact-section {
+    padding: 60px 5% 30px;
+  }
+
+  .contact-form {
+    gap: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
   }
 
   .contact-tab-wrapper {
