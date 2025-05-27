@@ -926,10 +926,13 @@ body {
            ABOUT PAGE COMBINED CODE
 ----------------------------------------------*/
 
-.about-page .main-header,
-.about-page .contact-section,
-.about-page .section-divider {
-  background-color: var(--black);
+.main-header,
+.founder-section,
+.testimonial-carousel,
+.gallery-cta-section,
+.contact-section,
+.section-divider {
+  transition: background-color 0.4s ease;
 }
 
 /* --------------------------------------------
