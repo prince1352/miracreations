@@ -1073,6 +1073,91 @@ body {
 }
 
 /* --------------------------------------------
+           CONTACT PAGE TITLE CODE
+----------------------------------------------*/
+
+.contact-hero {
+    background-color: var(--purple);
+    color: white;
+    text-align: center;
+    padding: 60px 20px 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-hero p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+/* --------------------------------------------
+           CONTACT PAGE FORM CODE
+----------------------------------------------*/
+
+  .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 40px 10%;
+    flex-wrap: wrap;
+    background-color: var(--black);
+    color: white;
+  }
+
+  .contact-info {
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .contact-info a {
+    color: var(--yellow);
+    text-decoration: none;
+  }
+
+  .contact-logo {
+    width: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .contact-form-wrapper {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .contact-form-wrapper h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    background-color: var(--yellow);
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .contact-form button:hover {
+    background-color: #e0b800;
+  }
+
+/* --------------------------------------------
    MAIN PAGE MOBILE OPTIMIZATION CODE (1200px)
 ----------------------------------------------*/
 
