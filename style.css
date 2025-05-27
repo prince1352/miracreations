@@ -1062,6 +1062,15 @@ body {
   cursor: pointer;
 }
 
+/* --------------------------------------------
+           GALLERY COMBINED CODE
+----------------------------------------------*/
+.main-header,
+.gallery-intro,
+.gallery-section,
+.contact-section {
+  transition: color 0.4s ease;
+}
 
 /* --------------------------------------------
    MAIN PAGE MOBILE OPTIMIZATION CODE (1200px)
