@@ -235,7 +235,7 @@
 </script>
 
 <!-- TRANSITION BACKGROUND COLOR SCRIPT -->  
-  <script>
+<script>
   const header = document.querySelector('.main-header');
   const founder = document.querySelector('.founder-section');
   const testimonials = document.querySelector('.testimonial-carousel');
@@ -246,7 +246,7 @@
   const purpleRGB = [76, 66, 153];   // var(--purple)
   const blackRGB = [37, 35, 40];     // var(--black)
 
-  // Blend two RGB colors based on progress (0 to 1)
+  // Helper to blend colors
   const blendColor = (start, end, progress) =>
     `rgb(
       ${Math.round(start[0] + (end[0] - start[0]) * progress)},
@@ -254,14 +254,14 @@
       ${Math.round(start[2] + (end[2] - start[2]) * progress)}
     )`;
 
-  // Get progress between two scroll positions
+  // Get scroll progress from 0 to 1
   const getProgress = (start, end, scrollY) => {
     if (scrollY <= start) return 0;
     if (scrollY >= end) return 1;
     return (scrollY - start) / (end - start);
   };
 
-  // Set initial color to --black on load
+  // Set initial color
   const blackColor = getComputedStyle(document.documentElement).getPropertyValue('--black');
   [header, founder, testimonials, gallery, contact].forEach(section => {
     section.style.backgroundColor = blackColor;
@@ -270,15 +270,13 @@
     div.style.backgroundColor = blackColor;
   });
 
-  // Scroll-based transition
+  // Scroll event
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
-
-    const startTransition = gallery.offsetTop;
     const endTransition = contact.offsetTop + contact.offsetHeight - vh;
 
-    const progress = getProgress(startTransition, endTransition, scrollY);
+    const progress = getProgress(0, endTransition, scrollY);
     const blendedColor = blendColor(blackRGB, purpleRGB, progress);
 
     [header, founder, testimonials, gallery, contact].forEach(section => {
@@ -290,7 +288,7 @@
     });
   });
 
-  // Trigger scroll once on page load
+  // Trigger once on page load
   window.dispatchEvent(new Event('scroll'));
 </script>
 
