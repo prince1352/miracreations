@@ -1089,6 +1089,10 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 
+  .hamburger {
+    top: 1.5rem;
+  }
+
 /* --------------------------------------------
    ABOUT PAGE MOBILE OPTIMIZATION CODE (768px)
 ----------------------------------------------*/
