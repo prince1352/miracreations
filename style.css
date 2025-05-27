@@ -1026,6 +1026,10 @@ body {
 ----------------------------------------------*/
 
 @media screen and (max-width: 768px) {
+  .hamburger {
+    top: 1.5rem;
+  }
+  
   .main-header {
     padding: 1rem 1.5rem;
     flex-wrap: nowrap;
@@ -1139,27 +1143,28 @@ body {
   }
 
   .contact-tab-wrapper {
-    bottom: 1rem;
+    top: auto;              /* cancel desktop top */
+    bottom: 1rem;           /* move to bottom */
     right: 1rem;
+    left: auto;
     flex-direction: row-reverse;
+    align-items: center;
     gap: 0.5rem;
+    height: auto;
   }
 
   .contact-arrow-wrapper {
-    display: none; /* Hide arrow/label entirely on phones */
+    display: none; /* Hide arrow and label */
   }
 
   .contact-tab {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 50%; /* Make it a circle */
     background-color: var(--yellow);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
-
-  .hamburger {
-    top: 1.5rem;
-  }
+  
 
 /* --------------------------------------------
    ABOUT PAGE MOBILE OPTIMIZATION CODE (768px)
