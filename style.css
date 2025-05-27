@@ -169,7 +169,12 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1005;
+  z-index: 1100;
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: transparent;
+  padding: 8px;
 }
 
 .hamburger span {
