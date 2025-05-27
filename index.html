@@ -151,7 +151,25 @@
   </div>
 </div>
 
-  <!-- Scripts -->
+<!-- MOBILE HEADER/MENU -->
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="mobile-nav" id="mobileNav">
+  <nav class="mobile-menu-links">
+    <a href="about.html">About Us</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#packages">Packages</a>
+    <a href="#contact">Contact Us</a>
+    <button class="mobile-quote-button">Free Quote</button>
+  </nav>
+</div>
+
+
+<!-- SCRIPTS -->
 <script>
   const header = document.querySelector('.main-header');
   const welcome = document.querySelector('.welcome-section');
@@ -234,7 +252,22 @@
     }
   });
 </script>
+  
+<!-- MOBILE SCRIPTS -->
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+
+  // Optional: Close on link click
+  document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('active'));
+  });
+</script>
 
   
 </body>
