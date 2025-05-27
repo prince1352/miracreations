@@ -803,16 +803,17 @@ body {
     transform: none;
     margin-right: 5px;
     transform: translateY(-55px);
+    gap: 8px;
   }
 
   .contact-label-over-arrow {
     transform: none;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: white;
     text-align: center;
     line-height: 1.2;
     margin-bottom: 2px;
-    transform: translate(30px, 15px);
+    transform: translateX(55px);
   }
 
   .contact-arrow-image {
