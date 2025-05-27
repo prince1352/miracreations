@@ -57,6 +57,26 @@
   </div>
 </section>
 
+<!-- REVIEW SECTION -->
+<section class="testimonial-carousel">
+  <h2 class="testimonial-title">What Our Clients Say</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial-slide active">
+      <p>"Mira Creations made our engagement unforgettable!"</p>
+      <span>- Simran & Raj</span>
+    </div>
+    <div class="testimonial-slide">
+      <p>"Incredible attention to detail. Our baby shower looked like a dream."</p>
+      <span>- Amanpreet K.</span>
+    </div>
+    <div class="testimonial-slide">
+      <p>"They understood our cultural traditions and blended them with modern elegance."</p>
+      <span>- The Grewal Family</span>
+    </div>
+  </div>
+</section>
+
+
   <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
   <div class="contact-content">
@@ -149,6 +169,18 @@
   document.querySelectorAll('.mobile-menu-links a').forEach(link => {
     link.addEventListener('click', () => mobileNav.classList.remove('active'));
   });
+</script>
+  
+<!-- REVIEW SECTION SCRIPT -->  
+<script>
+const slides = document.querySelectorAll('.testimonial-slide');
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 5000); // rotates every 5 seconds
 </script>
 
 </body>
