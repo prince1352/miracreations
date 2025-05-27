@@ -1122,10 +1122,13 @@ body {
 
 .testimonial-carousel {
     padding: 50px 1.5rem;
+    text-align: center;
   }
 
-  .testimonial-title {
-    font-size: 1.6rem;
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
   }
 
   .carousel-track {
@@ -1137,29 +1140,26 @@ body {
   .testimonial-slide {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     width: 100%;
-    max-width: 100%;
-    text-align: center;
+    padding: 0 1rem;
     opacity: 0;
     transition: opacity 0.6s ease;
+    text-align: center;
     font-size: 1rem;
     line-height: 1.5;
-    padding: 0 1rem;
   }
 
   .testimonial-slide.active {
     position: relative;
-    transform: none;
-    left: auto;
     opacity: 1;
-    margin: 0 auto;
   }
 
   .testimonial-slide span {
     display: block;
     margin-top: 1rem;
+    font-weight: 500;
+    color: var(--yellow);
     text-align: center;
   }
 
@@ -1170,7 +1170,6 @@ body {
     padding: 0;
     color: var(--yellow);
     position: absolute;
-    top: auto;
     bottom: 10px;
     transform: none;
     width: auto;
