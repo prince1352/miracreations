@@ -160,13 +160,16 @@ body {
   transition: opacity 1.2s ease;
 }
 
-/* HAMBURGER MENU */
+/* --------------------------------------------
+        MOBILE HEADER AND MENU SECTION
+----------------------------------------------*/
+
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1002;
+  z-index: 1005;
 }
 
 .hamburger span {
@@ -177,9 +180,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* --------------------------------------------
-        MOBILE HEADER AND MENU SECTION
-----------------------------------------------*/
 .mobile-nav {
   position: fixed;
   top: 0;
