@@ -942,7 +942,7 @@ body {
 .gallery-intro {
   background-color: var(--black);
   color: white;
-  padding: 40px 15% 60px;
+  padding: 60px 15% 30px;
   text-align: center;
 }
 
