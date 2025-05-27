@@ -774,15 +774,9 @@ body {
     padding: 0.6rem 1.4rem;
     font-size: 1.05rem;
   }
-
-  .hamburger {
-    grid-column: 3;
+  
+ .hamburger {
     display: flex;
-    justify-self: end;
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
   }
 }
 
