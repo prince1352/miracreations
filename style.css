@@ -798,7 +798,7 @@ body {
 .testimonial-carousel {
   background-color: var(--black);
   color: white;
-  padding: 80px 15%;
+  padding: 50px 15%;
   text-align: center;
   position: relative;
   overflow: hidden;
