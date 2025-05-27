@@ -1480,6 +1480,13 @@ body {
   .carousel-wrapper {
     width: 100%;
   }
+
+  .close-button {
+    top: 160px; /* was 30px, adjust as needed */
+    right: 20px;
+    font-size: 2rem;
+    z-index: 1003;
+  }
 }
 
 
