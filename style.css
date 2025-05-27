@@ -875,6 +875,65 @@ body {
 }
 
 /* --------------------------------------------
+         ABOUT PAGE GALLERY BUTTON CODE
+----------------------------------------------*/
+
+.gallery-cta-section {
+  background: url('images/Card1.jpg') center center / cover no-repeat;
+  position: relative;
+  padding: 100px 15%;
+  text-align: center;
+  color: white;
+}
+
+.gallery-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
+  z-index: 0;
+}
+
+.gallery-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-cta-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--yellow);
+}
+
+.gallery-cta-subtext {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.gallery-cta-button {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.gallery-cta-button:hover {
+  background-color: transparent;
+  color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+/* --------------------------------------------
            MOBILE OPTIMIZATION CODE
 ----------------------------------------------*/
 
