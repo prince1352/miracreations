@@ -942,7 +942,7 @@ body {
 .gallery-intro {
   background-color: var(--black);
   color: white;
-  padding: 60px 15% 30px;
+  padding: 60px 15% 20px;
   text-align: center;
 }
 
@@ -954,7 +954,7 @@ body {
 .gallery-title {
   font-size: 2.4rem;
   font-weight: 600;
-  color: var(--yellow);
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -969,7 +969,7 @@ body {
 ----------------------------------------------*/
 
 .gallery-section {
-  padding: 40px 10%;
+  padding: 20px 10% 40px;
   background-color: var(--black);
   color: white;
 }
@@ -982,7 +982,7 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--yellow);
+  color: white;
   text-align: left;
 }
 
