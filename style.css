@@ -778,6 +778,15 @@ body {
  .hamburger {
     display: flex;
   }
+
+  .specialize-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .card {
+    height: 220px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -808,6 +817,25 @@ body {
 
   .quote-button {
     display: none;
+  }
+
+  .specialize-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    height: 200px;
+  }
+
+  .specialize-title {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+
+  .specialize-button {
+    font-size: 1rem;
+    padding: 12px 24px;
   }
 }
 
