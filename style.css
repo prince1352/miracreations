@@ -785,9 +785,9 @@ body {
     height: 220px;
   }
   .contact-tab-wrapper {
-    top: auto;
-    bottom: 15%;
-    right: 1rem;
+    top: 33%;
+    bottom: auto;
+    right: 0rem;
     flex-direction: row;
     align-items: center;
     gap: 0.25rem;
@@ -796,22 +796,22 @@ body {
   .contact-arrow-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
-    height: auto;
+    height: 90px;
     margin-right: 0;
     transform: none;
-    gap: 4px;
+    margin-right: 5px;
   }
 
   .contact-label-over-arrow {
     transform: none;
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: white;
     text-align: center;
     line-height: 1.2;
-    margin-bottom: 0;
-    margin-top: 0.2rem;
+    margin-bottom: 2px;
+    transform: translate(30px, 15px);
   }
 
   .contact-arrow-image {
