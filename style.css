@@ -748,9 +748,9 @@ body {
 ----------------------------------------------*/
 
 .founder-section {
-  background-color: #f8f8f8;
+  background-color: var(--black);
   padding: 80px 15%;
-  color: #252328;
+  color: white;
 }
 
 .founder-content {
@@ -765,7 +765,7 @@ body {
   max-width: 350px;
   width: 100%;
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
   object-fit: cover;
 }
 
@@ -776,7 +776,7 @@ body {
 .founder-title {
   font-size: 2rem;
   font-weight: 600;
-  color: var(--purple);
+  color: var(--yellow);
   margin-bottom: 20px;
 }
 
@@ -787,7 +787,9 @@ body {
   margin-bottom: 20px;
 }
 
-.about-page .contact-label-over-arrow {
+.about-page .contact-label-over-arrow,
+.about-page .main-header,
+.about-page .contact-section {
   color: var(--black);
 }
 
@@ -805,9 +807,10 @@ body {
 }
 
 .testimonial-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
   margin-bottom: 30px;
-  color: var(--yellow);
+  color: white;
 }
 
 .carousel-container {
@@ -879,19 +882,11 @@ body {
 ----------------------------------------------*/
 
 .gallery-cta-section {
-  background: url('images/Card1.jpg') center center / cover no-repeat;
+  background: var(--black);
   position: relative;
   padding: 100px 15%;
   text-align: center;
   color: white;
-}
-
-.gallery-cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for contrast */
-  z-index: 0;
 }
 
 .gallery-cta-content {
@@ -902,10 +897,10 @@ body {
 }
 
 .gallery-cta-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: var(--yellow);
+  color: white;
 }
 
 .gallery-cta-subtext {
