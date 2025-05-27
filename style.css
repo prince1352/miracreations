@@ -964,13 +964,96 @@ body {
   line-height: 1.6;
 }
 
+/* --------------------------------------------
+   GALLERY PAGE IMAGES SECTION
+----------------------------------------------*/
 
+.gallery-section {
+  padding: 60px 10%;
+  background-color: var(--black);
+  color: white;
+}
 
+.gallery-category {
+  margin-bottom: 60px;
+}
 
+.gallery-category h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--yellow);
+  text-align: left;
+}
 
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+}
 
+.carousel img {
+  height: 180px;
+  width: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 8px;
+}
 
+.carousel img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
 
+.track-wedding {
+  animation: scroll 40s linear infinite;
+}
+.track-event {
+  animation: scroll 50s linear infinite;
+}
+.track-jewelry {
+  animation: scroll 30s linear infinite;
+}
+.track-clothing {
+  animation: scroll 45s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+}
+
+.image-modal img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+}
+
+.close-button {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
 
 
 /* --------------------------------------------
