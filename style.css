@@ -798,10 +798,11 @@ body {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    height: 90px;
+    height: 130px;
     margin-right: 0;
     transform: none;
     margin-right: 5px;
+    transform: translateY(-30px);
   }
 
   .contact-label-over-arrow {
