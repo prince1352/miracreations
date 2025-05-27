@@ -1438,7 +1438,7 @@ body {
     display: none;
   }
 
-  /* Replace carousel with a 2-column grid */
+  /* 2-column uniform grid layout */
   .carousel {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr);
@@ -1448,10 +1448,11 @@ body {
     width: 100%;
   }
 
+  /* Uniform size for all images + stretch */
   .carousel img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 160px; /* or whatever height looks good on your layout */
+    object-fit: fill; /* stretch to fill entire box */
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1464,6 +1465,9 @@ body {
 
   .gallery-category h2 {
     text-align: center;
+    font-size: 1.4rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
   }
 
   .gallery-section {
