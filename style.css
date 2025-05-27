@@ -1193,6 +1193,9 @@ body {
     text-align: center;
   }
 
+  .testimonial-title {
+  font-size: 1.6rem;
+
   .carousel-container {
     position: relative;
     width: 100%;
@@ -1214,6 +1217,7 @@ body {
     transition: opacity 0.6s ease;
     text-align: center;
     display: block;
+    font-size: 1rem;
   }
 
   .testimonial-slide.active {
@@ -1243,7 +1247,7 @@ body {
     padding: 0;
     color: var(--yellow);
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
     transform: none;
     width: auto;
     height: auto;
@@ -1251,11 +1255,11 @@ body {
   }
 
   .carousel-btn.prev {
-    left: 5px;
+    left: 1px;
   }
 
   .carousel-btn.next {
-    right: 5px;
+    right: 1px;
   }
 
   .carousel-btn:active {
