@@ -789,8 +789,10 @@ body {
 
 .about-page .contact-label-over-arrow,
 .about-page .main-header,
-.about-page .contact-section {
+.about-page .contact-section,
+.about-page .section-divider {
   color: var(--black);
+  background-color: var(--black);
 }
 
 /* --------------------------------------------
@@ -798,7 +800,7 @@ body {
 ----------------------------------------------*/
 
 .testimonial-carousel {
-  background-color: var(--purple);
+  background-color: var(--black);
   color: white;
   padding: 40px 15% 55px 15%;
   text-align: center;
