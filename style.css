@@ -1434,49 +1434,63 @@ body {
    GALLERY PAGE MOBILE OPTIMIZATION CODE (768px)
 ----------------------------------------------*/
 
-    .gallery-intro {
-    padding: 40px 5% 20px;
+ .gallery-intro {
+    padding: 40px 8% 20px;
   }
 
   .gallery-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .gallery-subtitle {
     font-size: 1rem;
+    line-height: 1.4;
   }
 
   .gallery-section {
     padding: 20px 5% 40px;
   }
 
+  .gallery-category {
+    margin-bottom: 40px;
+  }
+
   .gallery-category h2 {
     font-size: 1.4rem;
-    padding-left: 5px;
+    margin-bottom: 16px;
     text-align: left;
   }
 
-  .carousel img {
-    width: 85vw;
-    height: auto;
-    object-fit: cover;
+  /* Replace carousel with grid */
+  .carousel-wrapper {
+    overflow: visible;
   }
 
   .carousel {
-    animation: scroll-mobile 30s linear infinite;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    animation: none;
+    transform: none;
   }
 
-  @keyframes scroll-mobile {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
+  .carousel img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.3);
+  }
+
+  /* Modal image viewer */
   .image-modal img {
-    max-width: 95vw;
+    max-width: 90vw;
     max-height: 70vh;
   }
 
