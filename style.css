@@ -936,6 +936,44 @@ body {
 }
 
 /* --------------------------------------------
+           GALLERY PAGE TITLE SECTION
+----------------------------------------------*/
+
+.gallery-intro {
+  background-color: var(--black);
+  color: white;
+  padding: 80px 15% 60px;
+  text-align: center;
+}
+
+.gallery-intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--yellow);
+  margin-bottom: 1rem;
+}
+
+.gallery-subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------
    MAIN PAGE MOBILE OPTIMIZATION CODE (1200px)
 ----------------------------------------------*/
 
