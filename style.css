@@ -784,6 +784,34 @@ body {
   .card {
     height: 220px;
   }
+  .contact-tab-wrapper {
+    top: auto;
+    bottom: 15%;
+    right: 1rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-arrow-wrapper {
+    height: auto;
+    margin-right: 0.5rem;
+    transform: scale(0.85);
+  }
+
+  .contact-label-over-arrow {
+    transform: none;
+    font-size: 0.9rem;
+  }
+
+  .contact-tab {
+    width: 40px;
+    height: 55px;
+  }
+
+  .contact-arrow-image {
+    width: 36px;
+    height: 100px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -829,6 +857,25 @@ body {
   .specialize-button {
     font-size: 1rem;
     padding: 12px 24px;
+  }
+
+  .contact-tab-wrapper {
+    bottom: 1rem;
+    right: 1rem;
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+  }
+
+  .contact-arrow-wrapper {
+    display: none; /* Hide arrow/label entirely on phones */
+  }
+
+  .contact-tab {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
 }
 
