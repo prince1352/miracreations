@@ -1129,6 +1129,16 @@ body {
     line-height: 1.5;
     padding: 0 1rem;
     text-align: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+
+  .testimonial-slide span {
+    text-align: center;
+    display: block;
   }
 
   .carousel-btn {
@@ -1173,6 +1183,11 @@ body {
   .gallery-cta-button {
     font-size: 1rem;
     padding: 12px 28px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: transparent;
+    color: var(--yellow);
   }
 }
 
