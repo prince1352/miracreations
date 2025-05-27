@@ -886,7 +886,7 @@ body {
 .gallery-cta-section {
   background: var(--black);
   position: relative;
-  padding: 100px 15%;
+  padding: 40px 15% 55px 15%;
   text-align: center;
   color: white;
 }
