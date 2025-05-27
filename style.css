@@ -994,8 +994,9 @@ body {
 }
 
 .carousel img {
-  height: 180px;
-  width: auto;
+  height: 280px;
+  width: 380px;
+  object-fit: cover;
   flex-shrink: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
