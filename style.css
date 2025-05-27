@@ -942,7 +942,7 @@ body {
 .gallery-intro {
   background-color: var(--black);
   color: white;
-  padding: 80px 15% 60px;
+  padding: 40px 15% 60px;
   text-align: center;
 }
 
@@ -969,7 +969,7 @@ body {
 ----------------------------------------------*/
 
 .gallery-section {
-  padding: 60px 10%;
+  padding: 40px 10%;
   background-color: var(--black);
   color: white;
 }
