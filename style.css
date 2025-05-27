@@ -986,11 +986,17 @@ body {
   text-align: left;
 }
 
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 .carousel {
   display: flex;
   gap: 20px;
-  overflow: hidden;
-  position: relative;
+  animation: scroll 60s linear infinite;
+  width: max-content;
 }
 
 .carousel img {
@@ -1009,23 +1015,23 @@ body {
 }
 
 .track-wedding {
-  animation: scroll 40s linear infinite;
+  animation-duration: 40s;
 }
 .track-event {
-  animation: scroll 50s linear infinite;
+  animation-duration: 50s;
 }
 .track-jewelry {
-  animation: scroll 30s linear infinite;
+  animation-duration: 30s;
 }
 .track-clothing {
-  animation: scroll 45s linear infinite;
+  animation-duration: 45s;
 }
 
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+  100% {
     transform: translateX(-50%);
   }
 }
