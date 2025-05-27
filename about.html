@@ -60,22 +60,27 @@
 <!-- REVIEW SECTION -->
 <section class="testimonial-carousel">
   <h2 class="testimonial-title">What Our Clients Say</h2>
-  <div class="testimonial-slider">
-    <div class="testimonial-slide active">
-      <p>"Mira Creations made our engagement unforgettable!"</p>
-      <span>- Simran & Raj</span>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="testimonial-slide active">
+        <p>"Mira Creations made my wedding day magical! The decor was breathtaking."</p>
+        <span>- Amandeep & Harjit, Edmonton</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Professional, thoughtful, and beautiful designs. Our baby shower was perfect."</p>
+        <span>- Kaur Family</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Munvir was incredible to work with. She brought our cultural wedding vision to life."</p>
+        <span>- Jasleen & Manvir</span>
+      </div>
     </div>
-    <div class="testimonial-slide">
-      <p>"Incredible attention to detail. Our baby shower looked like a dream."</p>
-      <span>- Amanpreet K.</span>
-    </div>
-    <div class="testimonial-slide">
-      <p>"They understood our cultural traditions and blended them with modern elegance."</p>
-      <span>- The Grewal Family</span>
-    </div>
+
+    <!-- Controls -->
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
-
 
   <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
@@ -173,14 +178,30 @@
   
 <!-- REVIEW SECTION SCRIPT -->  
 <script>
-const slides = document.querySelectorAll('.testimonial-slide');
-let index = 0;
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentSlide = 0;
 
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 5000); // rotates every 5 seconds
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  // Optional: initialize
+  showSlide(currentSlide);
 </script>
 
 </body>
