@@ -1116,7 +1116,7 @@ body {
     font-size: 1rem;
   }
 
-  .testimonial-carousel {
+.testimonial-carousel {
     padding: 50px 1.5rem;
   }
 
@@ -1127,15 +1127,37 @@ body {
   .testimonial-slide {
     font-size: 1rem;
     line-height: 1.5;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .carousel-btn {
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    padding: 0;
+    color: var(--yellow);
+    position: absolute;
+    top: auto;
+    bottom: 10px; /* aligns with reviewer's name */
+    transform: none;
+    width: auto;
+    height: auto;
+    line-height: 1;
   }
 
   .carousel-btn.prev {
-    left: -20px;
+    left: 20px;
   }
 
   .carousel-btn.next {
-    right: -20px;
+    right: 20px;
   }
+
+  .carousel-btn:active {
+    transform: scale(1.1); /* subtle tap feedback */
+  }
+  
   .gallery-cta-section {
     padding: 60px 1.5rem;
   }
