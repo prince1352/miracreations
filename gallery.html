@@ -255,33 +255,61 @@
 <!-- SCROLL TRANSITION SCRIPT -->
 
 <script>
+  const header = document.querySelector('.main-header');
+  const intro = document.querySelector('.gallery-intro');
+  const gallery = document.querySelector('.gallery-section');
+  const contact = document.querySelector('.contact-section');
+  const dividers = document.querySelectorAll('.section-divider');
+
+  const purpleRGB = [76, 66, 153];   // var(--purple)
+  const blackRGB = [37, 35, 40];     // var(--black)
+
+  // Helper to blend colors
+  const blendColor = (start, end, progress) =>
+    `rgb(
+      ${Math.round(start[0] + (end[0] - start[0]) * progress)},
+      ${Math.round(start[1] + (end[1] - start[1]) * progress)},
+      ${Math.round(start[2] + (end[2] - start[2]) * progress)}
+    )`;
+
+  // Get scroll progress from 0 to 1
+  const getProgress = (start, end, scrollY) => {
+    if (scrollY <= start) return 0;
+    if (scrollY >= end) return 1;
+    return (scrollY - start) / (end - start);
+  };
+
+  // Set initial color
+  const blackColor = getComputedStyle(document.documentElement).getPropertyValue('--black');
+  [header, founder, testimonials, gallery, contact].forEach(section => {
+    section.style.backgroundColor = blackColor;
+  });
+  dividers.forEach(div => {
+    div.style.backgroundColor = blackColor;
+  });
+
+  // Scroll event
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-    const contactSection = document.getElementById('contact');
-    const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
-    const progress = Math.min(scrollY / contactEnd, 1);
+    const vh = window.innerHeight;
+    const endTransition = contact.offsetTop + contact.offsetHeight - vh;
 
-    const blackRGB = [18, 18, 18]; // Matches your --black
-    const purpleRGB = [82, 36, 123]; // Matches your --purple
+    const progress = getProgress(0, endTransition, scrollY);
+    const blendedColor = blendColor(blackRGB, purpleRGB, progress);
 
-    function blendColor(startRGB, endRGB, t) {
-      return `rgb(${startRGB.map((start, i) => Math.round(start + (endRGB[i] - start) * t)).join(',')})`;
-    }
+    [header, intro, gallery, contact].forEach(section => {
+      section.style.backgroundColor = blendedColor;
+    });
 
-    const blended = blendColor(blackRGB, purpleRGB, progress);
-
-    document.querySelectorAll('body, .main-header, .section-divider, .contact-section').forEach(el => {
-      el.style.backgroundColor = blended;
+    dividers.forEach(div => {
+      div.style.backgroundColor = blendedColor;
     });
   });
 
-  // Set initial background color on load
-  window.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('body, .main-header, .section-divider, .contact-section').forEach(el => {
-      el.style.backgroundColor = 'rgb(18, 18, 18)'; // --black
-    });
-  });
+  // Trigger once on page load
+  window.dispatchEvent(new Event('scroll'));
 </script>
+
 
 
 </body>
