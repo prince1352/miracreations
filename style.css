@@ -787,14 +787,6 @@ body {
   margin-bottom: 20px;
 }
 
-.about-page .contact-label-over-arrow,
-.about-page .main-header,
-.about-page .contact-section,
-.about-page .section-divider {
-  color: var(--black);
-  background-color: var(--black);
-}
-
 /* --------------------------------------------
             ABOUT PAGE REVIEW SECTION
 ----------------------------------------------*/
@@ -928,6 +920,16 @@ body {
   background-color: transparent;
   color: var(--yellow);
   border: 2px solid var(--yellow);
+}
+
+/* --------------------------------------------
+           ABOUT PAGE COMBINED CODE
+----------------------------------------------*/
+
+.about-page .main-header,
+.about-page .contact-section,
+.about-page .section-divider {
+  background-color: var(--black);
 }
 
 /* --------------------------------------------
