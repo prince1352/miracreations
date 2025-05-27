@@ -1482,8 +1482,8 @@ body {
   }
 
   .close-button {
-    top: 160px; /* was 30px, adjust as needed */
-    right: 20px;
+    top: 30px; /* was 30px, adjust as needed */
+    right: 740px;
     font-size: 2rem;
     z-index: 1003;
   }
