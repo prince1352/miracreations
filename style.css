@@ -787,6 +787,10 @@ body {
   margin-bottom: 20px;
 }
 
+.about-page .contact-label-over-arrow {
+  color: var(--black);
+}
+
 /* --------------------------------------------
            MOBILE OPTIMIZATION CODE
 ----------------------------------------------*/
