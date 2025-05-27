@@ -742,16 +742,42 @@ body {
 ----------------------------------------------*/
 
 @media screen and (max-width: 1200px) {
+  .main-header {
+    padding: 1rem 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    position: relative;
+  }
+
+  .header-left {
+    justify-self: start;
+    transform: scale(1); /* don't shrink yet */
+  }
+
   .main-nav {
     display: none;
   }
 
+  .header-right {
+    display: contents; /* allow quote + hamburger to be positioned separately */
+  }
+
+  .quote-button {
+    grid-column: 2;
+    justify-self: center;
+    padding: 0.6rem 1.4rem;
+    font-size: 1.05rem;
+  }
+
   .hamburger {
+    grid-column: 3;
     display: flex;
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-self: end;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
   }
 }
 
