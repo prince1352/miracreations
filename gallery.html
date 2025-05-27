@@ -252,6 +252,37 @@
   });
 </script>
 
+<!-- SCROLL TRANSITION SCRIPT -->
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const contactSection = document.getElementById('contact');
+    const contactEnd = contactSection.offsetTop + contactSection.offsetHeight;
+    const progress = Math.min(scrollY / contactEnd, 1);
+
+    const blackRGB = [18, 18, 18]; // Matches your --black
+    const purpleRGB = [82, 36, 123]; // Matches your --purple
+
+    function blendColor(startRGB, endRGB, t) {
+      return `rgb(${startRGB.map((start, i) => Math.round(start + (endRGB[i] - start) * t)).join(',')})`;
+    }
+
+    const blended = blendColor(blackRGB, purpleRGB, progress);
+
+    document.querySelectorAll('body, .main-header, .section-divider, .contact-section').forEach(el => {
+      el.style.backgroundColor = blended;
+    });
+  });
+
+  // Set initial background color on load
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('body, .main-header, .section-divider, .contact-section').forEach(el => {
+      el.style.backgroundColor = 'rgb(18, 18, 18)'; // --black
+    });
+  });
+</script>
+
 
 </body>
 </html>
