@@ -1434,44 +1434,18 @@ body {
    GALLERY PAGE MOBILE OPTIMIZATION CODE (768px)
 ----------------------------------------------*/
 
- .gallery-intro {
-    padding: 40px 8% 20px;
+ .carousel img.clone {
+    display: none;
   }
 
-  .gallery-title {
-    font-size: 1.8rem;
-  }
-
-  .gallery-subtitle {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .gallery-section {
-    padding: 20px 5% 40px;
-  }
-
-  .gallery-category {
-    margin-bottom: 40px;
-  }
-
-  .gallery-category h2 {
-    font-size: 1.4rem;
-    margin-bottom: 16px;
-    text-align: left;
-  }
-
-  /* Replace carousel with grid */
-  .carousel-wrapper {
-    overflow: visible;
-  }
-
+  /* Replace carousel with a 2-column grid */
   .carousel {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    animation: none;
-    transform: none;
+    animation: none !important;
+    transform: none !important;
+    width: 100%;
   }
 
   .carousel img {
@@ -1488,16 +1462,19 @@ body {
     box-shadow: 0 3px 12px rgba(255, 255, 255, 0.3);
   }
 
-  /* Modal image viewer */
-  .image-modal img {
-    max-width: 90vw;
-    max-height: 70vh;
+  .gallery-category h2 {
+    text-align: center;
   }
 
-  .close-button {
-    top: 20px;
-    right: 20px;
-    font-size: 1.8rem;
+  .gallery-section {
+    padding: 20px 6%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
   }
 }
 
