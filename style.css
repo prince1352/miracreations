@@ -936,7 +936,7 @@ body {
 }
 
 /* --------------------------------------------
-           MOBILE OPTIMIZATION CODE
+   MAIN PAGE MOBILE OPTIMIZATION CODE (1200px)
 ----------------------------------------------*/
 
 @media screen and (max-width: 1200px) {
@@ -1021,6 +1021,10 @@ body {
   }
 }
 
+/* --------------------------------------------
+   MAIN PAGE MOBILE OPTIMIZATION CODE (768px)
+----------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   .main-header {
     padding: 1rem 1.5rem;
@@ -1084,5 +1088,70 @@ body {
     background-color: var(--yellow);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
+
+/* --------------------------------------------
+   ABOUT PAGE MOBILE OPTIMIZATION CODE (768px)
+----------------------------------------------*/
+
+.founder-section {
+    padding: 60px 1.5rem;
+    text-align: center;
+  }
+
+  .founder-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .founder-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .founder-title {
+    font-size: 1.6rem;
+  }
+
+  .founder-text p {
+    font-size: 1rem;
+  }
+
+  .testimonial-carousel {
+    padding: 50px 1.5rem;
+  }
+
+  .testimonial-title {
+    font-size: 1.6rem;
+  }
+
+  .testimonial-slide {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .carousel-btn.prev {
+    left: -20px;
+  }
+
+  .carousel-btn.next {
+    right: -20px;
+  }
+  .gallery-cta-section {
+    padding: 60px 1.5rem;
+  }
+
+  .gallery-cta-title {
+    font-size: 1.6rem;
+  }
+
+  .gallery-cta-subtext {
+    font-size: 1rem;
+  }
+
+  .gallery-cta-button {
+    font-size: 1rem;
+    padding: 12px 28px;
+  }
 }
+
 
