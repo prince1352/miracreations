@@ -61,27 +61,44 @@
 <body class="about-page">
 
 <!-- HEADER AND MENU -->
-  <header class="main-header">
-    <a href="/" class="header-left">
-      <div class="logo-container header-logo-container">
-        <img src="/images/Logo-Purple.png" class="logo header-logo purple-logo" />
-        <img src="/images/Logo-Black.png" class="logo header-logo black-logo" />
-      </div>
-      <div class="brand-text">
-        <div class="brand-title">MIRA CREATIONS</div>
-        <div class="brand-subtitle">JEWELLERY AND DECOR</div>
-      </div>
-    </a>
-    <nav class="main-nav">
-      <a href="/">Home</a>
-      <a href="/AboutUs/">About Us</a>
-      <a href="/Gallery/">Gallery</a>
-      <a href="/ContactUs/">Contact Us</a>
-    </nav>
-    <div class="header-right">
-       <button class="quote-button" onclick="window.location.href='/ContactUs/'">Free Quote</button>
-</div>
-  </header>
+<header class="main-header" role="banner">
+  <a href="/" class="header-left" aria-label="Mira Creations homepage">
+    <div class="logo-container header-logo-container">
+      <img 
+        src="images/Logo-Purple.png" 
+        class="welcome-logo purple-logo" 
+        alt="Mira Creations Purple Logo for Weddings and Event Decor and Jewellery in Edmonton" 
+        loading="lazy" 
+        aria-hidden="true" />
+      <img 
+        src="images/Logo-Black.png" 
+        class="welcome-logo black-logo" 
+        alt="Elegant Black Mira Creations Logo for Wedding Decor Business" 
+        loading="lazy" 
+        aria-hidden="true" />
+    </div>
+    <div class="brand-text">
+      <div class="brand-title">MIRA CREATIONS</div>
+      <div class="brand-subtitle">JEWELLERY AND DECOR</div>
+    </div>
+  </a>
+
+  <nav class="main-nav" role="navigation" aria-label="Main menu">
+    <a href="/">Home</a>
+    <a href="AboutUs/">About Us</a>
+    <a href="Gallery/">Gallery</a>
+    <a href="ContactUs/">Contact Us</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="quote-button" 
+            onclick="window.location.href='ContactUs/'" 
+            aria-label="Request a free quote from Mira Creations">
+      Free Quote
+    </button>
+  </div>
+</header>
+
 
   <!-- HAMBURGER MENU -->
     <div class="hamburger" id="hamburger">
@@ -99,19 +116,23 @@
     <div class="founder-text">
       <h2 class="founder-title" role="heading" aria-level="2">Meet The Team</h2>
       <p>
-        Mira Creations is a <strong>family-run wedding and event decor business</strong> based in Edmonton, Alberta. Founded by a mother and her two daughters, our journey began in 2022 when we took on the challenge of planning a family member's wedding. From selecting jewelry and outfits to designing each floral arrangement and personal detail, we discovered a shared passion for creating unforgettable experiences.
+        Mira Creations is a family-run wedding and event decor business based in Edmonton, Alberta. Founded by a mother and her two daughters, our journey began in 2022 when we took on the challenge of planning a family member's wedding. From selecting jewelry and outfits to designing each floral arrangement and personal detail, we discovered a shared passion for creating unforgettable experiences.
       </p>
       <p>
-        What started as a one-time project quickly evolved into a trusted name in <a href="/Gallery/" title="Event decor and jewelry examples">event styling and bridal accessories</a>. We now work with clients across Edmonton to bring their most important celebrations to life — with care, culture, and creativity at the heart of everything we do.
+        What started as a one-time project quickly evolved into a trusted name in event styling and bridal accessories. We now work with clients across Edmonton to bring their most important celebrations to life, with care, culture, and creativity at the heart of everything we do.
       </p>
     </div>
   </div>
 </section>
 
 <!-- DIVIDER BETWEEN FOUNDER & REVIEW SECTIONS -->
-<div class="section-divider">
+<div class="section-divider" role="presentation" aria-hidden="true">
   <div class="specialize-line"></div>
-  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <img src="images/Logo-Black.png" 
+       alt="Mira Creations logo used as decorative section divider" 
+       class="specialize-logo"
+       loading="lazy" 
+       aria-hidden="true" />
   <div class="specialize-line"></div>
 </div>
 
@@ -151,25 +172,35 @@
 
 
 <!-- DIVIDER BETWEEN REVIEW & GALLERY SECTIONS -->
-<div class="section-divider">
+<div class="section-divider" role="presentation" aria-hidden="true">
   <div class="specialize-line"></div>
-  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <img src="images/Logo-Black.png" 
+       alt="Mira Creations logo used as decorative section divider" 
+       class="specialize-logo"
+       loading="lazy" 
+       aria-hidden="true" />
   <div class="specialize-line"></div>
 </div>
 
 <!-- GALLERY CTA SECTION -->
-<section class="gallery-cta-section">
+<section class="gallery-cta-section" role="region" aria-label="Gallery preview and call to action">
   <div class="gallery-cta-content">
-    <h2 class="gallery-cta-title">See Our Work in Action</h2>
-    <p class="gallery-cta-subtext">From weddings to cultural celebrations, explore how Mira Creations brings elegant visions to life.</p>
+    <h2 class="gallery-cta-title" role="heading" aria-level="2">See Our Work in Action</h2>
+    <p class="gallery-cta-subtext">
+      From weddings to cultural celebrations, Mira Creations brings elegant visions to life for clients across Edmonton and the surrounding area.
+    </p>
     <a href="/Gallery/" class="gallery-cta-button">Browse Our Gallery</a>
   </div>
 </section>
 
 <!-- DIVIDER BETWEEN GALLERY & CONTACT SECTIONS -->
-<div class="section-divider">
+<div class="section-divider" role="presentation" aria-hidden="true">
   <div class="specialize-line"></div>
-  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <img src="images/Logo-Black.png" 
+       alt="Mira Creations logo used as decorative section divider" 
+       class="specialize-logo"
+       loading="lazy" 
+       aria-hidden="true" />
   <div class="specialize-line"></div>
 </div>
   
@@ -204,51 +235,67 @@
 </section>
 
 <!-- FOOTER SECTION -->
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo" aria-label="Website footer">
   <div class="footer-content">
-    <p>&copy; 2025 Mira Creations. All rights reserved.</p>
-    <div class="footer-links">
+    <p>&copy; <span id="year">2025</span> Mira Creations. All rights reserved.</p>
+    
+    <nav class="footer-links" aria-label="Footer navigation">
       <a href="/">Home</a>
-      <a href="/AboutUs/">About</a>
-      <a href="/Gallery/">Gallery</a>
-      <a href="/ContactUs/">Contact Us</a>
-    </div>
+      <a href="AboutUs/">About</a>
+      <a href="Gallery/">Gallery</a>
+      <a href="ContactUs/">Contact Us</a>
+    </nav>
   </div>
 </footer>
 
 <!-- Floating Contact Ribbon + Arrow -->
-<div class="contact-tab-wrapper" id="contactTab">
+<div class="contact-tab-wrapper" id="contactTab" role="button" aria-label="Open contact information" tabindex="0">
   <!-- Label + Arrow inside their own wrapper -->
-  <div class="contact-arrow-wrapper">
+  <div class="contact-arrow-wrapper" aria-hidden="true">
     <div class="contact-label-over-arrow">Contact Information</div>
-    <img src="/images/arrow.png" class="contact-arrow-image" alt="Arrow" />
+    <img 
+      src="images/arrow.png" 
+      class="contact-arrow-image" 
+      alt="Arrow pointing to contact tab"
+      loading="lazy"
+      aria-hidden="true" />
   </div>
 
-  <!-- The yellow clickable tab -->
-  <div class="contact-tab"></div>
+  <!-- The yellow clickable tab (decorative only) -->
+  <div class="contact-tab" aria-hidden="true"></div>
 </div>
-
 
 <!-- Overlay and Popup Card -->
-<div class="contact-overlay" id="contactOverlay">
-  <div class="contact-popup">
-    <h3>Contact Information</h3>
-    <p><strong>Location:</strong> Edmonton, Alberta</p>
-    <p><strong>Phone:</strong> <a href="tel:5877090058">587-709-0058</a></p>
-    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com">mira.creations@outlook.com</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank">@mira.creations1</a></p>
-    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank">@mira.creations1</a></p>
+<div class="contact-overlay" id="contactOverlay" role="dialog" aria-modal="true" aria-label="Contact Details">
+  <div class="contact-popup" itemscope itemtype="https://schema.org/LocalBusiness">
+    <meta itemprop="name" content="Mira Creations" />
+    <meta itemprop="url" content="https://miradecorandjewellery.com/" />
+    <meta itemprop="image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
+
+    <h3 role="heading" aria-level="3">Contact Information</h3>
+    <p><strong>Location:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Edmonton</span>, <span itemprop="addressRegion">AB</span>
+    </span></p>
+    <p><strong>Phone:</strong> <a href="tel:5877090058" itemprop="telephone">587-709-0058</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com" itemprop="email">mira.creations@outlook.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank" rel="noopener">@mira.creations1</a></p>
+    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank" rel="noopener">@mira.creations1</a></p>
   </div>
 </div>
 
+
 <!-- MOBILE HEADER/MENU -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile menu">
   <nav class="mobile-menu-links">
     <a href="/">Home</a>
-    <a href="/AboutUs/">About Us</a>
-    <a href="/Gallery/">Gallery</a>
-    <a href="/ContactUs/">Contact Us</a>
-    <button class="mobile-quote-button" onclick="window.location.href='/ContactUs/'">Free Quote</button>
+    <a href="AboutUs/">About Us</a>
+    <a href="Gallery/">Gallery</a>
+    <a href="ContactUs/">Contact Us</a>
+    <button class="mobile-quote-button" 
+            onclick="window.location.href='ContactUs/'" 
+            aria-label="Request a free quote from Mira Creations">
+      Free Quote
+    </button>
   </nav>
 </div>
 
