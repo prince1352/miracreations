@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiraCreations</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- HEADER AND MENU -->
+  <header class="main-header">
+    <a href="/" class="header-left">
+      <div class="logo-container header-logo-container">
+        <img src="/images/Logo-Purple.png" class="logo header-logo purple-logo" />
+        <img src="/images/Logo-Black.png" class="logo header-logo black-logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">MIRA CREATIONS</div>
+        <div class="brand-subtitle">JEWELLERY AND DECOR</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/AboutUs">About Us</a>
+      <a href="/Gallery">Gallery</a>
+      <a href="/ContactUs">Contact Us</a>
+    </nav>
+    <div class="header-right">
+        <button class="quote-button" onclick="window.location.href='/ContactUs'">Free Quote</button>
+</div>
+  </header>
+
+  <!-- HAMBURGER MENU -->
+    <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+<!-- GALLERY PAGE TITLE SECTION -->
+<section class="gallery-intro">
+  <div class="gallery-intro-content">
+    <h1 class="gallery-title">Our Gallery</h1>
+    <p class="gallery-subtitle">Explore the stunning designs and decor pieces we’ve created for unforgettable celebrations.</p>
+  </div>
+</section>
+
+
+<!-- GALLERY CAROUSEL SECTION -->
+<section class="gallery-section">
+  <!-- Wedding Decor -->
+  <div class="gallery-category">
+    <h2>Wedding Decor</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel track-wedding">
+        <img src="/images/gallery/wedding1.jpg" alt="Wedding 1" />
+        <img src="/images/gallery/wedding2.jpg" alt="Wedding 2" />
+        <img src="/images/gallery/wedding3.jpg" alt="Wedding 3" />
+        <img src="/images/gallery/wedding4.jpg" alt="Wedding 4" />
+        <img src="/images/gallery/wedding5.jpg" alt="Wedding 5" />
+        <img src="/images/gallery/wedding1.jpg" alt="Wedding 1 clone" class="clone"/>
+        <img src="/images/gallery/wedding2.jpg" alt="Wedding 2 clone" class="clone"/>
+        <img src="/images/gallery/wedding3.jpg" alt="Wedding 3 clone" class="clone"/>
+        <img src="/images/gallery/wedding4.jpg" alt="Wedding 4 clone" class="clone"/>
+        <img src="/images/gallery/wedding5.jpg" alt="Wedding 5 clone" class="clone"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Special Events Decor -->
+  <div class="gallery-category">
+    <h2>Special Events Decor</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel track-event">
+        <img src="/images/gallery/event1.jpg" alt="Event 1" />
+        <img src="/images/gallery/event2.jpg" alt="Event 2" />
+        <img src="/images/gallery/event3.jpg" alt="Event 3" />
+        <img src="/images/gallery/event4.jpg" alt="Event 4" />
+        <img src="/images/gallery/event5.jpg" alt="Event 5" />
+        <img src="/images/gallery/event1.jpg" alt="Event 1 clone" class="clone"/>
+        <img src="/images/gallery/event2.jpg" alt="Event 2 clone" class="clone"/>
+        <img src="/images/gallery/event3.jpg" alt="Event 3 clone" class="clone"/>
+        <img src="/images/gallery/event4.jpg" alt="Event 4 clone" class="clone"/>
+        <img src="/images/gallery/event5.jpg" alt="Event 5 clone" class="clone"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jewellery -->
+  <div class="gallery-category">
+    <h2>Jewellery</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel track-jewellery">
+        <img src="/images/gallery/jewellery1.jpg" alt="Jewellery 1" />
+        <img src="/images/gallery/jewellery2.jpg" alt="Jewellery 2" />
+        <img src="/images/gallery/jewellery3.jpg" alt="Jewellery 3" />
+        <img src="/images/gallery/jewellery4.jpg" alt="Jewellery 4" />
+        <img src="/images/gallery/jewellery5.jpg" alt="Jewellery 5" />
+        <img src="/images/gallery/jewellery1.jpg" alt="Jewellery 1 clone" class="clone"/>
+        <img src="/images/gallery/jewellery2.jpg" alt="Jewellery 2 clone" class="clone"/>
+        <img src="/images/gallery/jewellery3.jpg" alt="Jewellery 3 clone" class="clone"/>
+        <img src="/images/gallery/jewellery4.jpg" alt="Jewellery 4 clone" class="clone"/>
+        <img src="/images/gallery/jewellery5.jpg" alt="Jewellery 5 clone" class="clone"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- Suits and Kurtas
+  <div class="gallery-category">
+    <h2>Suits and Kurtas</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel track-clothing">
+        <img src="/images/gallery/clothing1.jpg" alt="Clothing 1" />
+        <img src="/images/gallery/clothing2.jpg" alt="Clothing 2" />
+        <img src="/images/gallery/clothing3.jpg" alt="Clothing 3" />
+        <img src="/images/gallery/clothing4.jpg" alt="Clothing 4" />
+        <img src="/images/gallery/clothing5.jpg" alt="Clothing 5" />
+        <img src="/images/gallery/clothing1.jpg" alt="Clothing 1 clone" class="clone"/>
+        <img src="/images/gallery/clothing2.jpg" alt="Clothing 2 clone" class="clone"/>
+        <img src="/images/gallery/clothing3.jpg" alt="Clothing 3 clone" class="clone"/>
+        <img src="/images/gallery/clothing4.jpg" alt="Clothing 4 clone" class="clone"/>
+        <img src="/images/gallery/clothing5.jpg" alt="Clothing 5 clone" class="clone"/>
+      </div>
+    </div>
+  </div>
+
+  -->
+  
+  <!-- Modal Viewer -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-button" id="modalClose">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+</section>
+
+<!-- DIVIDER BETWEEN GALLERY & CONTACT SECTIONS -->
+<div class="section-divider">
+  <div class="specialize-line"></div>
+  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <div class="specialize-line"></div>
+</div>
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-content">
+    <h2 class="specialize-title">Contact Us</h2>
+
+    <form action="https://formsubmit.io/send/mira.creations@outlook.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Mira Creations. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/AboutUs">About</a>
+      <a href="/Gallery">Gallery</a>
+      <a href="/ContactUs">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Contact Ribbon + Arrow -->
+<div class="contact-tab-wrapper" id="contactTab">
+  <!-- Label + Arrow inside their own wrapper -->
+  <div class="contact-arrow-wrapper">
+    <div class="contact-label-over-arrow">Contact Information</div>
+    <img src="/images/arrow.png" class="contact-arrow-image" alt="Arrow" />
+  </div>
+
+  <!-- The yellow clickable tab -->
+  <div class="contact-tab"></div>
+</div>
+
+
+<!-- Overlay and Popup Card -->
+<div class="contact-overlay" id="contactOverlay">
+  <div class="contact-popup">
+    <h3>Contact Information</h3>
+    <p><strong>Location:</strong> Edmonton, Alberta</p>
+    <p><strong>Phone:</strong> <a href="tel:5877090058">587-709-0058</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com">mira.creations@outlook.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank">@mira.creations1</a></p>
+    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank">@mira.creations1</a></p>
+  </div>
+</div>
+
+<!-- MOBILE HEADER/MENU -->
+<div class="mobile-nav" id="mobileNav">
+  <nav class="mobile-menu-links">
+    <a href="/">Home</a>
+    <a href="/AboutUs">About Us</a>
+    <a href="/Gallery">Gallery</a>
+    <a href="/ContactUs">Contact Us</a>
+    <button class="mobile-quote-button" onclick="window.location.href='/ContactUs'">Free Quote</button>
+  </nav>
+</div>
+
+<script>
+  const contactTab = document.getElementById('contactTab');
+  const contactOverlay = document.getElementById('contactOverlay');
+
+  contactTab.addEventListener('click', () => {
+    contactOverlay.classList.add('active');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
+      contactOverlay.classList.remove('active');
+    }
+  });
+</script>
+  
+<!-- MOBILE SCRIPTS -->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+
+  // Optional: Close on link click
+  document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('active'));
+  });
+</script>
+
+<!-- IMAGES SCRIPTS -->
+<script>
+  const images = document.querySelectorAll('.carousel img');
+  const modal = document.getElementById('imageModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalClose = document.getElementById('modalClose');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImage.src = img.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  modalClose.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+</script>
+
+<!-- SCROLL TRANSITION SCRIPT -->
+
+<script>
+  const header = document.querySelector('.main-header');
+  const intro = document.querySelector('.gallery-intro');
+  const gallery = document.querySelector('.gallery-section');
+  const contact = document.querySelector('.contact-section');
+  const dividers = document.querySelectorAll('.section-divider');
+
+  const purpleRGB = [76, 66, 153];   // var(--purple)
+  const blackRGB = [37, 35, 40];     // var(--black)
+
+  // Helper to blend colors
+  const blendColor = (start, end, progress) =>
+    `rgb(
+      ${Math.round(start[0] + (end[0] - start[0]) * progress)},
+      ${Math.round(start[1] + (end[1] - start[1]) * progress)},
+      ${Math.round(start[2] + (end[2] - start[2]) * progress)}
+    )`;
+
+  // Get scroll progress from 0 to 1
+  const getProgress = (start, end, scrollY) => {
+    if (scrollY <= start) return 0;
+    if (scrollY >= end) return 1;
+    return (scrollY - start) / (end - start);
+  };
+
+  // Set initial color
+  const blackColor = getComputedStyle(document.documentElement).getPropertyValue('--black');
+  [header, intro, gallery, contact].forEach(section => {
+    section.style.backgroundColor = blackColor;
+  });
+  dividers.forEach(div => {
+    div.style.backgroundColor = blackColor;
+  });
+
+  // Scroll event
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+    const endTransition = contact.offsetTop + contact.offsetHeight - vh;
+
+    const progress = getProgress(0, endTransition, scrollY);
+    const blendedColor = blendColor(blackRGB, purpleRGB, progress);
+
+    [header, intro, gallery, contact].forEach(section => {
+      section.style.backgroundColor = blendedColor;
+    });
+
+    dividers.forEach(div => {
+      div.style.backgroundColor = blendedColor;
+    });
+  });
+
+  // Trigger once on page load
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+
+
+</body>
+</html>
