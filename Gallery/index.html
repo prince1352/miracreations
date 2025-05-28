@@ -2,36 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="index, follow">
-  <title>MiraCreations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Gallery | Wedding and Event Decor by Mira Creations in Edmonton</title>
+  <meta name="description" content="Browse our gallery of beautifully styled weddings, cultural celebrations, and handcrafted jewellery. Serving Edmonton and surrounding areas." />
+  <meta name="keywords" content="event decor gallery, Edmonton wedding decor, Indian wedding styling, Mira Creations, cultural celebrations, bridal jewellery, South Asian decor Edmonton" />
+  <link rel="canonical" href="https://miradecorandjewellery.com/Gallery/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gallery | Wedding and Event Decor by Mira Creations in Edmonton" />
+  <meta property="og:description" content="Explore our portfolio of decor and jewellery designs for weddings and cultural events in Edmonton." />
+  <meta property="og:image" content="https://miradecorandjewellery.com/images/gallery/wedding1.jpg" />
+  <meta property="og:url" content="https://miradecorandjewellery.com/Gallery/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | Wedding and Event Decor by Mira Creations" />
+  <meta name="twitter:description" content="See how Mira Creations transforms weddings and events through elegant decor and jewellery." />
+  <meta name="twitter:image" content="https://miradecorandjewellery.com/images/gallery/wedding1.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Mira Creations Gallery",
+    "url": "https://miradecorandjewellery.com/Gallery/",
+    "description": "A portfolio of wedding and cultural event decor and jewellery by Mira Creations in Edmonton.",
+    "image": "https://miradecorandjewellery.com/images/gallery/wedding1.jpg"
+  }
+  </script>
+
   <link rel="stylesheet" href="/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
 </head>
+  
 <body>
 
-<!-- HEADER AND MENU -->
-  <header class="main-header">
-    <a href="/" class="header-left">
-      <div class="logo-container header-logo-container">
-        <img src="/images/Logo-Purple.png" class="logo header-logo purple-logo" />
-        <img src="/images/Logo-Black.png" class="logo header-logo black-logo" />
-      </div>
-      <div class="brand-text">
-        <div class="brand-title">MIRA CREATIONS</div>
-        <div class="brand-subtitle">JEWELLERY AND DECOR</div>
-      </div>
-    </a>
-    <nav class="main-nav">
-      <a href="/">Home</a>
-      <a href="/AboutUs">About Us</a>
-      <a href="/Gallery">Gallery</a>
-      <a href="/ContactUs">Contact Us</a>
-    </nav>
-    <div class="header-right">
-        <button class="quote-button" onclick="window.location.href='/ContactUs'">Free Quote</button>
-</div>
-  </header>
+<<!-- HEADER AND MENU -->
+<header class="main-header" role="banner">
+  <a href="/" class="header-left" aria-label="Mira Creations homepage">
+    <div class="logo-container header-logo-container">
+      <img 
+        src="images/Logo-Purple.png" 
+        class="welcome-logo purple-logo" 
+        alt="Mira Creations Purple Logo for Weddings and Event Decor and Jewellery in Edmonton" 
+        loading="lazy" 
+        aria-hidden="true" />
+      <img 
+        src="images/Logo-Black.png" 
+        class="welcome-logo black-logo" 
+        alt="Elegant Black Mira Creations Logo for Wedding Decor Business" 
+        loading="lazy" 
+        aria-hidden="true" />
+    </div>
+    <div class="brand-text">
+      <div class="brand-title">MIRA CREATIONS</div>
+      <div class="brand-subtitle">JEWELLERY AND DECOR</div>
+    </div>
+  </a>
+
+  <nav class="main-nav" role="navigation" aria-label="Main menu">
+    <a href="/">Home</a>
+    <a href="AboutUs/">About Us</a>
+    <a href="Gallery/">Gallery</a>
+    <a href="ContactUs/">Contact Us</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="quote-button" 
+            onclick="window.location.href='ContactUs/'" 
+            aria-label="Request a free quote from Mira Creations">
+      Free Quote
+    </button>
+  </div>
+</header>
 
   <!-- HAMBURGER MENU -->
     <div class="hamburger" id="hamburger">
@@ -41,171 +92,211 @@
   </div>
 
 <!-- GALLERY PAGE TITLE SECTION -->
-<section class="gallery-intro">
+<section class="gallery-intro" role="region" aria-label="Gallery introduction">
   <div class="gallery-intro-content">
     <h1 class="gallery-title">Our Gallery</h1>
-    <p class="gallery-subtitle">Explore the stunning designs and decor pieces we’ve created for unforgettable celebrations.</p>
+    <p class="gallery-subtitle">Explore the stunning designs and decor pieces we've created for weddings, cultural events, and special occasions across Edmonton.</p>
   </div>
 </section>
 
 
 <!-- GALLERY CAROUSEL SECTION -->
 <section class="gallery-section">
+
   <!-- Wedding Decor -->
-  <div class="gallery-category">
-    <h2>Wedding Decor</h2>
+  <div class="gallery-category" role="region" aria-label="Wedding Decor Gallery">
+    <h2 role="heading" aria-level="2">Wedding Decor</h2>
     <div class="carousel-wrapper">
       <div class="carousel track-wedding">
-        <img src="/images/gallery/wedding1.jpg" alt="Wedding 1" />
-        <img src="/images/gallery/wedding2.jpg" alt="Wedding 2" />
-        <img src="/images/gallery/wedding3.jpg" alt="Wedding 3" />
-        <img src="/images/gallery/wedding4.jpg" alt="Wedding 4" />
-        <img src="/images/gallery/wedding5.jpg" alt="Wedding 5" />
-        <img src="/images/gallery/wedding1.jpg" alt="Wedding 1 clone" class="clone"/>
-        <img src="/images/gallery/wedding2.jpg" alt="Wedding 2 clone" class="clone"/>
-        <img src="/images/gallery/wedding3.jpg" alt="Wedding 3 clone" class="clone"/>
-        <img src="/images/gallery/wedding4.jpg" alt="Wedding 4 clone" class="clone"/>
-        <img src="/images/gallery/wedding5.jpg" alt="Wedding 5 clone" class="clone"/>
+        <img src="/images/gallery/wedding1.jpg" loading="lazy" alt="Luxurious red and gold wedding stage decor with draped fabrics and floral arches in Edmonton" />
+        <img src="/images/gallery/wedding2.jpg" loading="lazy" alt="Elegant wedding reception setup with white drapes and floral backdrop by Mira Creations" />
+        <img src="/images/gallery/wedding3.jpg" loading="lazy" alt="Traditional mandap arrangement with gold pillars and marigold garlands" />
+        <img src="/images/gallery/wedding4.jpg" loading="lazy" alt="Wedding head table decor with candles, rose petals, and custom signage" />
+        <img src="/images/gallery/wedding5.jpg" loading="lazy" alt="Stage layout for Sikh wedding with cream draping and soft floral arrangements" />
+        <img src="/images/gallery/wedding1.jpg" loading="lazy" alt="Repeat: Luxurious red and gold wedding stage decor" class="clone" />
+        <img src="/images/gallery/wedding2.jpg" loading="lazy" alt="Repeat: Elegant reception with floral backdrop" class="clone" />
+        <img src="/images/gallery/wedding3.jpg" loading="lazy" alt="Repeat: Mandap with gold and marigold decor" class="clone" />
+        <img src="/images/gallery/wedding4.jpg" loading="lazy" alt="Repeat: Head table with candles and petals" class="clone" />
+        <img src="/images/gallery/wedding5.jpg" loading="lazy" alt="Repeat: Cream draping with floral setup" class="clone" />
       </div>
     </div>
   </div>
 
   <!-- Special Events Decor -->
-  <div class="gallery-category">
-    <h2>Special Events Decor</h2>
+  <div class="gallery-category" role="region" aria-label="Special Events Decor Gallery">
+    <h2 role="heading" aria-level="2">Special Events Decor</h2>
     <div class="carousel-wrapper">
       <div class="carousel track-event">
-        <img src="/images/gallery/event1.jpg" alt="Event 1" />
-        <img src="/images/gallery/event2.jpg" alt="Event 2" />
-        <img src="/images/gallery/event3.jpg" alt="Event 3" />
-        <img src="/images/gallery/event4.jpg" alt="Event 4" />
-        <img src="/images/gallery/event5.jpg" alt="Event 5" />
-        <img src="/images/gallery/event1.jpg" alt="Event 1 clone" class="clone"/>
-        <img src="/images/gallery/event2.jpg" alt="Event 2 clone" class="clone"/>
-        <img src="/images/gallery/event3.jpg" alt="Event 3 clone" class="clone"/>
-        <img src="/images/gallery/event4.jpg" alt="Event 4 clone" class="clone"/>
-        <img src="/images/gallery/event5.jpg" alt="Event 5 clone" class="clone"/>
+        <img src="/images/gallery/event1.jpg" loading="lazy" alt="Pastel-themed baby shower with balloon arch and custom backdrop by Mira Creations" />
+        <img src="/images/gallery/event2.jpg" loading="lazy" alt="Birthday party decor with gold and black table settings and streamers" />
+        <img src="/images/gallery/event3.jpg" loading="lazy" alt="Anniversary celebration setup with candlelit centerpieces and rose petals" />
+        <img src="/images/gallery/event4.jpg" loading="lazy" alt="Cultural event decor featuring traditional fabric hangings and warm lighting" />
+        <img src="/images/gallery/event5.jpg" loading="lazy" alt="Graduation party setup with large balloon arch and gold-themed decor" />
+        <img src="/images/gallery/event1.jpg" loading="lazy" alt="Repeat: Baby shower decor with balloons and signage" class="clone" />
+        <img src="/images/gallery/event2.jpg" loading="lazy" alt="Repeat: Birthday decor with black and gold accents" class="clone" />
+        <img src="/images/gallery/event3.jpg" loading="lazy" alt="Repeat: Anniversary decor with candles and florals" class="clone" />
+        <img src="/images/gallery/event4.jpg" loading="lazy" alt="Repeat: Cultural event with fabric decor" class="clone" />
+        <img src="/images/gallery/event5.jpg" loading="lazy" alt="Repeat: Graduation party decor with balloons" class="clone" />
       </div>
     </div>
   </div>
 
   <!-- Jewellery -->
-  <div class="gallery-category">
-    <h2>Jewellery</h2>
+  <div class="gallery-category" role="region" aria-label="Jewellery Showcase Gallery">
+    <h2 role="heading" aria-level="2">Jewellery</h2>
     <div class="carousel-wrapper">
       <div class="carousel track-jewellery">
-        <img src="/images/gallery/jewellery1.jpg" alt="Jewellery 1" />
-        <img src="/images/gallery/jewellery2.jpg" alt="Jewellery 2" />
-        <img src="/images/gallery/jewellery3.jpg" alt="Jewellery 3" />
-        <img src="/images/gallery/jewellery4.jpg" alt="Jewellery 4" />
-        <img src="/images/gallery/jewellery5.jpg" alt="Jewellery 5" />
-        <img src="/images/gallery/jewellery1.jpg" alt="Jewellery 1 clone" class="clone"/>
-        <img src="/images/gallery/jewellery2.jpg" alt="Jewellery 2 clone" class="clone"/>
-        <img src="/images/gallery/jewellery3.jpg" alt="Jewellery 3 clone" class="clone"/>
-        <img src="/images/gallery/jewellery4.jpg" alt="Jewellery 4 clone" class="clone"/>
-        <img src="/images/gallery/jewellery5.jpg" alt="Jewellery 5 clone" class="clone"/>
+        <img src="/images/gallery/jewellery1.jpg" loading="lazy" alt="Gold bridal necklace with intricate kundan work and dangling pearls for wedding styling" />
+        <img src="/images/gallery/jewellery2.jpg" loading="lazy" alt="Statement earrings with gold and red stones displayed on soft velvet tray" />
+        <img src="/images/gallery/jewellery3.jpg" loading="lazy" alt="Bridal jewellery choker with white stones and floral motif from Mira Creations" />
+        <img src="/images/gallery/jewellery4.jpg" loading="lazy" alt="Pakistani wedding necklace set with matching jhumka earrings and traditional detailing" />
+        <img src="/images/gallery/jewellery5.jpg" loading="lazy" alt="Classic bridal jewellery ensemble in red and gold tones for Indian weddings" />
+        <img src="/images/gallery/jewellery1.jpg" loading="lazy" alt="Repeat: Gold bridal kundan necklace with pearl detail" class="clone" />
+        <img src="/images/gallery/jewellery2.jpg" loading="lazy" alt="Repeat: Gold and red statement earrings on display" class="clone" />
+        <img src="/images/gallery/jewellery3.jpg" loading="lazy" alt="Repeat: White stone choker with floral motif" class="clone" />
+        <img src="/images/gallery/jewellery4.jpg" loading="lazy" alt="Repeat: Traditional Pakistani jhumka necklace" class="clone" />
+        <img src="/images/gallery/jewellery5.jpg" loading="lazy" alt="Repeat: Red and gold bridal jewellery set" class="clone" />
       </div>
     </div>
   </div>
 
   <!-- Suits and Kurtas
-  <div class="gallery-category">
-    <h2>Suits and Kurtas</h2>
+  <div class="gallery-category" role="region" aria-label="Suits and Kurtas Gallery">
+    <h2 role="heading" aria-level="2">Suits and Kurtas</h2>
     <div class="carousel-wrapper">
       <div class="carousel track-clothing">
-        <img src="/images/gallery/clothing1.jpg" alt="Clothing 1" />
-        <img src="/images/gallery/clothing2.jpg" alt="Clothing 2" />
-        <img src="/images/gallery/clothing3.jpg" alt="Clothing 3" />
-        <img src="/images/gallery/clothing4.jpg" alt="Clothing 4" />
-        <img src="/images/gallery/clothing5.jpg" alt="Clothing 5" />
-        <img src="/images/gallery/clothing1.jpg" alt="Clothing 1 clone" class="clone"/>
-        <img src="/images/gallery/clothing2.jpg" alt="Clothing 2 clone" class="clone"/>
-        <img src="/images/gallery/clothing3.jpg" alt="Clothing 3 clone" class="clone"/>
-        <img src="/images/gallery/clothing4.jpg" alt="Clothing 4 clone" class="clone"/>
-        <img src="/images/gallery/clothing5.jpg" alt="Clothing 5 clone" class="clone"/>
+        <img src="/images/gallery/clothing1.jpg" loading="lazy" alt="Traditional men's kurta in navy with gold embroidery, displayed on hanger" />
+        <img src="/images/gallery/clothing2.jpg" loading="lazy" alt="Women's embroidered suit set in pastel peach with matching dupatta" />
+        <img src="/images/gallery/clothing3.jpg" loading="lazy" alt="Designer Punjabi kurta set for grooms with subtle beige and red threadwork" />
+        <img src="/images/gallery/clothing4.jpg" loading="lazy" alt="Silk suit set in maroon with matching accessories laid out on table" />
+        <img src="/images/gallery/clothing5.jpg" loading="lazy" alt="Modern kurta outfit with minimalist design and neutral tones" />
+        <img src="/images/gallery/clothing1.jpg" loading="lazy" alt="Repeat: Navy kurta with gold embroidery" class="clone" />
+        <img src="/images/gallery/clothing2.jpg" loading="lazy" alt="Repeat: Peach suit with embroidered details" class="clone" />
+        <img src="/images/gallery/clothing3.jpg" loading="lazy" alt="Repeat: Beige groom kurta with red threadwork" class="clone" />
+        <img src="/images/gallery/clothing4.jpg" loading="lazy" alt="Repeat: Maroon silk suit with accessories" class="clone" />
+        <img src="/images/gallery/clothing5.jpg" loading="lazy" alt="Repeat: Minimalist neutral-toned kurta outfit" class="clone" />
       </div>
     </div>
   </div>
 
   -->
-  
+
   <!-- Modal Viewer -->
   <div class="image-modal" id="imageModal">
-    <span class="close-button" id="modalClose">&times;</span>
-    <img class="modal-content" id="modalImage" />
+    <span class="close-button" id="modalClose" aria-label="Close enlarged gallery image">&times;</span>
+    <img class="modal-content" id="modalImage" loading="lazy" alt="Enlarged gallery image" />
   </div>
 </section>
 
+
 <!-- DIVIDER BETWEEN GALLERY & CONTACT SECTIONS -->
-<div class="section-divider">
+<div class="section-divider" role="presentation" aria-hidden="true">
   <div class="specialize-line"></div>
-  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <img src="images/Logo-Black.png" 
+       alt="Mira Creations logo used as decorative section divider" 
+       class="specialize-logo"
+       loading="lazy" 
+       aria-hidden="true" />
   <div class="specialize-line"></div>
 </div>
 
-  <!-- CONTACT SECTION -->
-<section id="contact" class="contact-section">
-  <div class="contact-content">
-    <h2 class="specialize-title">Contact Us</h2>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section" role="region" aria-label="Contact Mira Creations">
+  <div class="contact-content" itemscope itemtype="https://schema.org/LocalBusiness">
+    <h2 class="specialize-title" role="heading" aria-level="2">Contact Us</h2>
+
+    <meta itemprop="name" content="Mira Creations" />
+    <meta itemprop="url" content="https://miradecorandjewellery.com/" />
+    <meta itemprop="image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
 
     <form action="https://formsubmit.io/send/mira.creations@outlook.com" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Your Phone Number" required />
-      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <textarea name="message" placeholder="Tell us about your event or jewelry needs" required></textarea>
       <button type="submit">Send Message</button>
     </form>
+
+    <div class="contact-details">
+      <p><strong>Phone:</strong> <a href="tel:5877090058" itemprop="telephone">587-709-0058</a></p>
+      <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com" itemprop="email">mira.creations@outlook.com</a></p>
+      <p><strong>Location:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="addressLocality">Edmonton</span>, 
+        <span itemprop="addressRegion">AB</span>
+      </span></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank">@mira.creations1</a></p>
+      <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank">@mira.creations1</a></p>
+    </div>
   </div>
 </section>
 
+
 <!-- FOOTER SECTION -->
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo" aria-label="Website footer">
   <div class="footer-content">
-    <p>&copy; 2025 Mira Creations. All rights reserved.</p>
-    <div class="footer-links">
+    <p>&copy; <span id="year">2025</span> Mira Creations. All rights reserved.</p>
+    
+    <nav class="footer-links" aria-label="Footer navigation">
       <a href="/">Home</a>
-      <a href="/AboutUs">About</a>
-      <a href="/Gallery">Gallery</a>
-      <a href="/ContactUs">Contact Us</a>
-    </div>
+      <a href="AboutUs/">About</a>
+      <a href="Gallery/">Gallery</a>
+      <a href="ContactUs/">Contact Us</a>
+    </nav>
   </div>
 </footer>
 
+
 <!-- Floating Contact Ribbon + Arrow -->
-<div class="contact-tab-wrapper" id="contactTab">
+<div class="contact-tab-wrapper" id="contactTab" role="button" aria-label="Open contact information" tabindex="0">
   <!-- Label + Arrow inside their own wrapper -->
-  <div class="contact-arrow-wrapper">
+  <div class="contact-arrow-wrapper" aria-hidden="true">
     <div class="contact-label-over-arrow">Contact Information</div>
-    <img src="/images/arrow.png" class="contact-arrow-image" alt="Arrow" />
+    <img 
+      src="images/arrow.png" 
+      class="contact-arrow-image" 
+      alt="Arrow pointing to contact tab"
+      loading="lazy"
+      aria-hidden="true" />
   </div>
 
-  <!-- The yellow clickable tab -->
-  <div class="contact-tab"></div>
+  <!-- The yellow clickable tab (decorative only) -->
+  <div class="contact-tab" aria-hidden="true"></div>
 </div>
 
-
 <!-- Overlay and Popup Card -->
-<div class="contact-overlay" id="contactOverlay">
-  <div class="contact-popup">
-    <h3>Contact Information</h3>
-    <p><strong>Location:</strong> Edmonton, Alberta</p>
-    <p><strong>Phone:</strong> <a href="tel:5877090058">587-709-0058</a></p>
-    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com">mira.creations@outlook.com</a></p>
-    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank">@mira.creations1</a></p>
-    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank">@mira.creations1</a></p>
+<div class="contact-overlay" id="contactOverlay" role="dialog" aria-modal="true" aria-label="Contact Details">
+  <div class="contact-popup" itemscope itemtype="https://schema.org/LocalBusiness">
+    <meta itemprop="name" content="Mira Creations" />
+    <meta itemprop="url" content="https://miradecorandjewellery.com/" />
+    <meta itemprop="image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
+
+    <h3 role="heading" aria-level="3">Contact Information</h3>
+    <p><strong>Location:</strong> <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="addressLocality">Edmonton</span>, <span itemprop="addressRegion">AB</span>
+    </span></p>
+    <p><strong>Phone:</strong> <a href="tel:5877090058" itemprop="telephone">587-709-0058</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com" itemprop="email">mira.creations@outlook.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank" rel="noopener">@mira.creations1</a></p>
+    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank" rel="noopener">@mira.creations1</a></p>
   </div>
 </div>
 
 <!-- MOBILE HEADER/MENU -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile menu">
   <nav class="mobile-menu-links">
     <a href="/">Home</a>
-    <a href="/AboutUs">About Us</a>
-    <a href="/Gallery">Gallery</a>
-    <a href="/ContactUs">Contact Us</a>
-    <button class="mobile-quote-button" onclick="window.location.href='/ContactUs'">Free Quote</button>
+    <a href="AboutUs/">About Us</a>
+    <a href="Gallery/">Gallery</a>
+    <a href="ContactUs/">Contact Us</a>
+    <button class="mobile-quote-button" 
+            onclick="window.location.href='ContactUs/'" 
+            aria-label="Request a free quote from Mira Creations">
+      Free Quote
+    </button>
   </nav>
 </div>
+
 
 <script>
   const contactTab = document.getElementById('contactTab');
