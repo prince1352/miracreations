@@ -320,7 +320,8 @@ body {
 }
 
 .down-arrow {
-  font-size: 1.8rem;
+  margin-left: 8px;
+  font-size: 1.4rem;
   color: var(--yellow);
   display: inline-block;
   line-height: 1;
