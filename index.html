@@ -226,6 +226,20 @@
   window.dispatchEvent(new Event('scroll'));
 </script>
 
+<script>
+  const contactTab = document.getElementById('contactTab');
+  const contactOverlay = document.getElementById('contactOverlay');
+
+  contactTab.addEventListener('click', () => {
+    contactOverlay.classList.add('active');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
+      contactOverlay.classList.remove('active');
+    }
+  });
+</script>
   
 <!-- MOBILE SCRIPTS -->
 
@@ -242,6 +256,7 @@
     link.addEventListener('click', () => mobileNav.classList.remove('active'));
   });
 </script>
+
 
   
 </body>
