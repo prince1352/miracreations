@@ -1,21 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="index, follow">
-  <title>MiraCreations</title>
+
+  <title>Event Decor & Jewelry in Edmonton | Mira Creations</title>
+  <meta name="description" content="Mira Creations offers luxury event decor and handcrafted jewellery for weddings, cultural celebrations, and special events in Edmonton and surrounding areas." />
+  <meta name="keywords" content="event decor Edmonton, wedding decor Edmonton, Indian wedding decoration, Edmonton jewellery, Mira Creations, stage decoration, cultural event decor, bridal accessories Edmonton" />
+  <link rel="canonical" href="https://miradecorandjewellery.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Event Decor & Jewelry in Edmonton | Mira Creations" />
+  <meta property="og:description" content="Luxury wedding and event decor with elegant jewellery collections for your special day in Edmonton." />
+  <meta property="og:image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
+  <meta property="og:url" content="https://miradecorandjewellery.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Event Decor & Jewelry in Edmonton | Mira Creations" />
+  <meta name="twitter:description" content="Specializing in premium event styling and handmade jewellery for weddings and cultural events in Edmonton." />
+  <meta name="twitter:image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Mira Creations",
+    "image": "https://miradecorandjewellery.com/images/Logo-Purple.png",
+    "@id": "https://miradecorandjewellery.com",
+    "url": "https://miradecorandjewellery.com",
+    "telephone": "+1-587-709-0058",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "",
+      "addressLocality": "Edmonton",
+      "addressRegion": "AB",
+      "postalCode": "",
+      "addressCountry": "CA"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://instagram.com/mira.creations1",
+      "https://tiktok.com/@mira.creations1"
+    ],
+    "description": "Mira Creations provides luxury event decor and elegant jewellery for weddings, baby showers, and cultural events across Edmonton and nearby communities."
+  }
+  </script>
+
+  <!-- Styles and Fonts -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
 </head>
+  
 <body>
 
   <!-- HEADER AND MENU -->
   <header class="main-header">
     <a href="/" class="header-left">
       <div class="logo-container header-logo-container">
-        <img src="images/Logo-Purple.png" class="logo header-logo purple-logo" />
-        <img src="images/Logo-Black.png" class="logo header-logo black-logo" />
+        <img src="images/Logo-Purple.png" class="welcome-logo purple-logo" alt="Mira Creations Purple Logo for Weddings and Event Decor and Jewellery in Edmonton" />
+        <img src="images/Logo-Black.png" class="welcome-logo black-logo" alt="Elegant Black Mira Creations Logo for Wedding Decor Business" />
       </div>
       <div class="brand-text">
         <div class="brand-title">MIRA CREATIONS</div>
@@ -45,8 +110,8 @@
   <div class="welcome-spacer"></div>
   <div class="welcome-content">
     <div class="logo-container welcome-logo-container">
-      <img src="images/Logo-Purple.png" class="welcome-logo purple-logo" />
-      <img src="images/Logo-Black.png" class="welcome-logo black-logo" />
+      <img src="images/Logo-Purple.png" class="welcome-logo purple-logo" alt="Mira Creations Purple Logo for Weddings and Event Styling in Edmonton" />
+      <img src="images/Logo-Black.png" class="welcome-logo black-logo" alt="Elegant Black Mira Creations Logo for Wedding Decor Business" />
     </div>
     <h1 class="welcome-title">Welcome to Mira Creations</h1>
     <h2 class="welcome-subtitle">Your trusted source for Premium Event Decor and Elegant Jewellery</h2>
@@ -64,14 +129,14 @@
 <!-- DIVIDER BETWEEN WELCOME & WHY US -->
 <div class="section-divider">
   <div class="specialize-line"></div>
-  <img src="images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <img src="images/Logo-Black.png" alt="Mira Creations Divider Logo - Premium Event Decor and Jewelry" class="specialize-logo" />
   <div class="specialize-line"></div>
 </div>
 
 <!-- WHY US SECTION -->
 <section id="why-us" class="why-us-section">
   <div class="why-us-content">
-    <h2 class="specialize-title">Why Choose Us</h2>
+    <h2 class="specialize-title" role="heading" aria-level="2">Why Choose Us</h2>
     <p>At Mira Creations, we specialize in bringing your vision to life with thoughtfully curated decor and jewellery. Whether you're planning a wedding, cultural celebration, or special event, we provide personalized service, premium craftsmanship, and timeless designs that reflect your style. With a deep understanding of tradition and a flair for the modern, we make every detail count, so you can focus on making memories.</p>
   </div>
 </section>
@@ -89,12 +154,41 @@
     <h2 class="specialize-title">We Specialize In</h2>
 
     <div class="specialize-cards">
-      <div class="card" style="background-image: url('images/Card1.jpg');"><span>Stage & Backdrop Design</span></div>
-      <div class="card" style="background-image: url('images/Card2.jpg');"><span>Event Accessory Packages</span></div>
-      <div class="card" style="background-image: url('images/Card3.jpg');"><span>Suits & Kurtas</span></div>
-      <div class="card" style="background-image: url('images/Card4.jpg');"><span>Baby Showers and Birthdays</span></div>
-      <div class="card" style="background-image: url('images/Card5.jpg');"><span>Jewellery Sales</span></div>
-      <div class="card" style="background-image: url('images/Card6.jpg');"><span>Table & Centrepiece Styling</span></div>
+      <div class="card" 
+           style="background-image: url('images/Card1.jpg');" 
+           aria-label="Stage and Backdrop Design for Weddings and Cultural Events in Edmonton">
+        <span role="heading" aria-level="3">Stage & Backdrop Design</span>
+      </div>
+
+      <div class="card" 
+           style="background-image: url('images/Card2.jpg');" 
+           aria-label="Event Accessory Packages including arches, props, and more for weddings and parties">
+        <span role="heading" aria-level="3">Event Accessory Packages</span>
+      </div>
+
+      <div class="card" 
+           style="background-image: url('images/Card3.jpg');" 
+           aria-label="Traditional Indian and Pakistani Suits for Women and Kurtas for Men - Edmonton Based">
+        <span role="heading" aria-level="3">Suits & Kurtas</span>
+      </div>
+
+      <div class="card" 
+           style="background-image: url('images/Card4.jpg');" 
+           aria-label="Decor and Theming for Baby Showers, Birthdays, and Special Celebrations in Edmonton">
+        <span role="heading" aria-level="3">Baby Showers and Birthdays</span>
+      </div>
+
+      <div class="card" 
+           style="background-image: url('images/Card5.jpg');" 
+           aria-label="Elegant Handmade Bridal and Wedding Jewellery from Mira Creations">
+        <span role="heading" aria-level="3">Jewellery Sales</span>
+      </div>
+
+      <div class="card" 
+           style="background-image: url('images/Card6.jpg');" 
+           aria-label="Table Decor and Centrepiece Styling for South Asian Events in Edmonton">
+        <span role="heading" aria-level="3">Table & Centrepiece Styling</span>
+      </div>
     </div>
 
     <a href="Gallery/" class="specialize-button">Check Out Our Gallery</a>
