@@ -320,13 +320,10 @@ body {
 }
 
 .down-arrow {
-  width: 16px;
-  height: 16px;
+  font-size: 1.8rem;
+  color: var(--yellow);
   display: inline-block;
-  background-image: url("data:image/svg+xml;utf8,<svg fill='%23f3ca4f' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M12 16l-6-6h12z'/></svg>");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  line-height: 1;
 }
 
 .welcome-logo-container {
