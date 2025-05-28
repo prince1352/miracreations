@@ -290,6 +290,12 @@ body {
   margin: 0;
 }
 
+.welcome-location {
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 0;
+}
+
 .scroll-indicator {
   display: flex;
   align-items: center;
@@ -1313,6 +1319,11 @@ body {
   }
 
   .welcome-subtitle {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .welcome-location {
     font-size: 1rem;
     padding: 0 10px;
   }
