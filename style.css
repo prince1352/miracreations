@@ -1321,6 +1321,11 @@ body {
     margin-bottom: 1rem;
   }
 
+  .down-arrow {
+  margin-left: 6px;
+  font-size: 1rem;
+}
+
   .scroll-indicator {
     font-size: 0.9rem;
     flex-direction: column;
