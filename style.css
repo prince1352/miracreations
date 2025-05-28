@@ -1104,7 +1104,7 @@ body {
     gap: 4rem;
     padding: 40px 10%;
     flex-wrap: wrap;
-    background-color: var(--black);
+    background-color: var(--purple);
     color: white;
   }
 
