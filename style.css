@@ -1110,6 +1110,7 @@ body {
   padding: 0 1rem;
   max-width: 1000px;
   text-align: center;
+  background-color: var(--purple);
 }
 
 .contact-item {
