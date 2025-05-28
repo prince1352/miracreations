@@ -172,6 +172,7 @@
 </div>
   
 <!-- SCRIPTS -->
+  
 <script>
   const header = document.querySelector('.main-header');
   const welcome = document.querySelector('.welcome-section');
@@ -201,59 +202,30 @@
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
 
-    // 🎯 Black transition completes when Why Us is centered
-    const whyUsStart = 0; // start scrolling
-    const whyUsEnd = whyUs.offsetTop - vh * (1 / 3);
+    const startTransition = 0;
+    const endTransition = contact.offsetTop + contact.offsetHeight - vh;
 
-    // 🎯 Purple transition completes before end of Contact
-    const contactStart = contact.offsetTop - vh;
-    const contactEnd = contactStart + vh / 2;
+    const progress = getProgress(startTransition, endTransition, scrollY);
+    const blendedColor = blendColor(purpleRGB, blackRGB, progress);
 
-    const progressToBlack = getProgress(whyUsStart, whyUsEnd, scrollY);
-    const progressToPurple = getProgress(contactStart, contactEnd, scrollY);
-
-    let finalProgress = 0;
-    if (scrollY < contactStart) {
-      finalProgress = progressToBlack;
-    } else {
-      finalProgress = 1 - progressToPurple;
-    }
-
-    const blendedColor = blendColor(purpleRGB, blackRGB, finalProgress);
-
-    // Apply blended background to all main sections
-    header.style.backgroundColor = blendedColor;
-    welcome.style.backgroundColor = blendedColor;
-    whyUs.style.backgroundColor = blendedColor;
-    services.style.backgroundColor = blendedColor;
-    contact.style.backgroundColor = blendedColor;
+    // Apply to all key sections
+    [header, welcome, whyUs, services, contact].forEach(section => {
+      section.style.backgroundColor = blendedColor;
+    });
 
     document.querySelectorAll('.section-divider').forEach(divider => {
       divider.style.backgroundColor = blendedColor;
     });
 
-    // Logo opacity swap
-    purpleLogos.forEach(logo => (logo.style.opacity = 1 - finalProgress));
-    blackLogos.forEach(logo => (logo.style.opacity = finalProgress));
+    // Logo fade between purple and black versions
+    purpleLogos.forEach(logo => (logo.style.opacity = 1 - progress));
+    blackLogos.forEach(logo => (logo.style.opacity = progress));
   });
 
+  // Trigger once on load
   window.dispatchEvent(new Event('scroll'));
 </script>
 
-<script>
-  const contactTab = document.getElementById('contactTab');
-  const contactOverlay = document.getElementById('contactOverlay');
-
-  contactTab.addEventListener('click', () => {
-    contactOverlay.classList.add('active');
-  });
-
-  window.addEventListener('click', (e) => {
-    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
-      contactOverlay.classList.remove('active');
-    }
-  });
-</script>
   
 <!-- MOBILE SCRIPTS -->
 
