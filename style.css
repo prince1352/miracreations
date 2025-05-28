@@ -1080,7 +1080,7 @@ body {
     background-color: var(--purple);
     color: white;
     text-align: center;
-    padding: 60px 20px 0px;
+    padding: 60px 20px 40px;
   }
 
   .contact-hero h1 {
@@ -1103,6 +1103,11 @@ body {
   background-color: var(--purple);
 }
 
+.contact-hero,
+.contact-icons-section {
+  outline: 1px solid lime;
+}
+  
 .contact-icons-row {
   display: flex;
   flex-wrap: wrap;
