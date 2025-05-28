@@ -922,6 +922,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  margin-bottom: 20px;
 }
 
 .gallery-cta-button:hover {
