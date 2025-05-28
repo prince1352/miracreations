@@ -1218,6 +1218,14 @@ body {
   .card {
     height: 220px;
   }
+
+  .close-button {
+    top: 30px; /* was 30px, adjust as needed */
+    left: 20px;
+    font-size: 2rem;
+    z-index: 1003;
+  }
+  
   .contact-tab-wrapper {
     top: 33%;
     bottom: auto;
@@ -1260,6 +1268,7 @@ body {
     width: 42px;
     height: 58px;
   }
+  
 }
 
 /* --------------------------------------------
