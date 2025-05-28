@@ -1080,7 +1080,7 @@ body {
     background-color: var(--purple);
     color: white;
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 60px 20px 0px;
   }
 
   .contact-hero h1 {
@@ -1098,9 +1098,9 @@ body {
 ----------------------------------------------*/
 .contact-form-section,
 .contact-icons-section {
-  background-color: var(--purple);
   margin: 0;
   padding: 0;
+  background-color: var(--purple);
 }
 
 .contact-icons-row {
