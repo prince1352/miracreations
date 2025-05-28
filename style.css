@@ -1096,6 +1096,10 @@ body {
 /* --------------------------------------------
            CONTACT PAGE FORM CODE
 ----------------------------------------------*/
+.contact-form-section,
+.contact-icons-section {
+  background-color: var(--purple);
+}
 
 .contact-icons-row {
   display: flex;
@@ -1130,14 +1134,11 @@ body {
   text-decoration: underline;
 }
 
-
-/* QUOTE SECTION FORM */
 .quote-section {
   text-align: center;
   padding: 2rem 1rem 4rem;
   max-width: 600px;
   margin: 0 auto;
-  background-color: var(--purple);
 }
 
 .quote-section h2 {
