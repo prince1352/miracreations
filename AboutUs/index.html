@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MiraCreations</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+</head>
+<body class="about-page">
+
+<!-- HEADER AND MENU -->
+  <header class="main-header">
+    <a href="/" class="header-left">
+      <div class="logo-container header-logo-container">
+        <img src="/images/Logo-Purple.png" class="logo header-logo purple-logo" />
+        <img src="/images/Logo-Black.png" class="logo header-logo black-logo" />
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">MIRA CREATIONS</div>
+        <div class="brand-subtitle">JEWELLERY AND DECOR</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="/">Home</a>
+      <a href="/AboutUs/">About Us</a>
+      <a href="/Gallery/">Gallery</a>
+      <a href="/ContactUs/">Contact Us</a>
+    </nav>
+    <div class="header-right">
+       <button class="quote-button" onclick="window.location.href='/ContactUs/'">Free Quote</button>
+</div>
+  </header>
+
+  <!-- HAMBURGER MENU -->
+    <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- ABOUT THE FOUNDER SECTION -->
+  <section class="founder-section">
+  <div class="founder-content">
+    <div class="founder-image">
+      <img src="/images/about-photo.jpg" alt="Family Indian Wedding Decor Business Mira Creations" />
+    </div>
+    <div class="founder-text">
+      <h2 class="founder-title">Meet The Team</h2>
+      <p>
+        Mira Creations is a family-run business founded by a mother and her two daughters. It all began in 2022 when we took on the challenge of planning and decorating a family member's wedding. From selecting jewellery and outfits to designing every floral arrangement and personal detail, we discovered a shared passion for creating beautiful, memorable experiences that bring people joy.
+      </p>
+      <p>
+        What started as a one-time project quickly blossomed into a growing business. Since then, we’ve poured our hearts into building Mira Creations into a trusted name in event decor and jewellery. Today, we help families across Edmonton turn their most important celebrations into unforgettable moments, with care, culture, and creativity at the center of everything we do.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER BETWEEN FOUNDER & REVIEW SECTIONS -->
+<div class="section-divider">
+  <div class="specialize-line"></div>
+  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <div class="specialize-line"></div>
+</div>
+
+<!-- REVIEW SECTION -->
+<section class="testimonial-carousel">
+  <h2 class="testimonial-title">What Our Clients Say</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="testimonial-slide active">
+        <p>"Mira Creations made our wedding day magical! The decor was breathtaking."</p>
+        <span>- Amandeep & Harjit</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>"Professional, thoughtful, and beautiful designs. Our baby shower was perfect."</p>
+        <span>- Gurwinder Singh</span>
+      </div>
+      <div class="testimonial-slide">
+        <p>"The entire Mira Team was incredible to work with. They brought our diwali event to life."</p>
+        <span>- Jasleen & Kiran</span>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
+<!-- DIVIDER BETWEEN REVIEW & GALLERY SECTIONS -->
+<div class="section-divider">
+  <div class="specialize-line"></div>
+  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <div class="specialize-line"></div>
+</div>
+
+<!-- GALLERY CTA SECTION -->
+<section class="gallery-cta-section">
+  <div class="gallery-cta-content">
+    <h2 class="gallery-cta-title">See Our Work in Action</h2>
+    <p class="gallery-cta-subtext">From weddings to cultural celebrations, explore how Mira Creations brings elegant visions to life.</p>
+    <a href="/Gallery/" class="gallery-cta-button">Browse Our Gallery</a>
+  </div>
+</section>
+
+<!-- DIVIDER BETWEEN GALLERY & CONTACT SECTIONS -->
+<div class="section-divider">
+  <div class="specialize-line"></div>
+  <img src="/images/Logo-Black.png" alt="Logo" class="specialize-logo" />
+  <div class="specialize-line"></div>
+</div>
+  
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <div class="contact-content">
+    <h2 class="specialize-title">Contact Us</h2>
+
+    <form action="https://formsubmit.io/send/mira.creations@outlook.com" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="How can we help you?" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Mira Creations. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/AboutUs/">About</a>
+      <a href="/Gallery/">Gallery</a>
+      <a href="/ContactUs/">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating Contact Ribbon + Arrow -->
+<div class="contact-tab-wrapper" id="contactTab">
+  <!-- Label + Arrow inside their own wrapper -->
+  <div class="contact-arrow-wrapper">
+    <div class="contact-label-over-arrow">Contact Information</div>
+    <img src="/images/arrow.png" class="contact-arrow-image" alt="Arrow" />
+  </div>
+
+  <!-- The yellow clickable tab -->
+  <div class="contact-tab"></div>
+</div>
+
+
+<!-- Overlay and Popup Card -->
+<div class="contact-overlay" id="contactOverlay">
+  <div class="contact-popup">
+    <h3>Contact Information</h3>
+    <p><strong>Location:</strong> Edmonton, Alberta</p>
+    <p><strong>Phone:</strong> <a href="tel:5877090058">587-709-0058</a></p>
+    <p><strong>Email:</strong> <a href="mailto:mira.creations@outlook.com">mira.creations@outlook.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://instagram.com/mira.creations1" target="_blank">@mira.creations1</a></p>
+    <p><strong>TikTok:</strong> <a href="https://tiktok.com/@mira.creations1" target="_blank">@mira.creations1</a></p>
+  </div>
+</div>
+
+<!-- MOBILE HEADER/MENU -->
+<div class="mobile-nav" id="mobileNav">
+  <nav class="mobile-menu-links">
+    <a href="/">Home</a>
+    <a href="/AboutUs/">About Us</a>
+    <a href="/Gallery/">Gallery</a>
+    <a href="/ContactUs/">Contact Us</a>
+    <button class="mobile-quote-button" onclick="window.location.href='/ContactUs/'">Free Quote</button>
+  </nav>
+</div>
+
+<script>
+  const contactTab = document.getElementById('contactTab');
+  const contactOverlay = document.getElementById('contactOverlay');
+
+  contactTab.addEventListener('click', () => {
+    contactOverlay.classList.add('active');
+  });
+
+  window.addEventListener('click', (e) => {
+    if (contactOverlay.classList.contains('active') && !e.target.closest('.contact-popup') && !contactTab.contains(e.target)) {
+      contactOverlay.classList.remove('active');
+    }
+  });
+</script>
+  
+<!-- MOBILE SCRIPTS -->
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+  });
+
+  // Optional: Close on link click
+  document.querySelectorAll('.mobile-menu-links a').forEach(link => {
+    link.addEventListener('click', () => mobileNav.classList.remove('active'));
+  });
+</script>
+  
+<!-- REVIEW SECTION SCRIPT -->  
+<script>
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) slide.classList.add('active');
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  });
+
+  // Optional: initialize
+  showSlide(currentSlide);
+</script>
+
+<!-- TRANSITION BACKGROUND COLOR SCRIPT -->  
+<script>
+  const header = document.querySelector('.main-header');
+  const founder = document.querySelector('.founder-section');
+  const testimonials = document.querySelector('.testimonial-carousel');
+  const gallery = document.querySelector('.gallery-cta-section');
+  const contact = document.querySelector('#contact');
+  const dividers = document.querySelectorAll('.section-divider');
+
+  const purpleRGB = [76, 66, 153];   // var(--purple)
+  const blackRGB = [37, 35, 40];     // var(--black)
+
+  // Helper to blend colors
+  const blendColor = (start, end, progress) =>
+    `rgb(
+      ${Math.round(start[0] + (end[0] - start[0]) * progress)},
+      ${Math.round(start[1] + (end[1] - start[1]) * progress)},
+      ${Math.round(start[2] + (end[2] - start[2]) * progress)}
+    )`;
+
+  // Get scroll progress from 0 to 1
+  const getProgress = (start, end, scrollY) => {
+    if (scrollY <= start) return 0;
+    if (scrollY >= end) return 1;
+    return (scrollY - start) / (end - start);
+  };
+
+  // Set initial color
+  const blackColor = getComputedStyle(document.documentElement).getPropertyValue('--black');
+  [header, founder, testimonials, gallery, contact].forEach(section => {
+    section.style.backgroundColor = blackColor;
+  });
+  dividers.forEach(div => {
+    div.style.backgroundColor = blackColor;
+  });
+
+  // Scroll event
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const vh = window.innerHeight;
+    const endTransition = contact.offsetTop + contact.offsetHeight - vh;
+
+    const progress = getProgress(0, endTransition, scrollY);
+    const blendedColor = blendColor(blackRGB, purpleRGB, progress);
+
+    [header, founder, testimonials, gallery, contact].forEach(section => {
+      section.style.backgroundColor = blendedColor;
+    });
+
+    dividers.forEach(div => {
+      div.style.backgroundColor = blendedColor;
+    });
+  });
+
+  // Trigger once on page load
+  window.dispatchEvent(new Event('scroll'));
+</script>
+
+
+</body>
+</html>
