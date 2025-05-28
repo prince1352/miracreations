@@ -1099,6 +1099,8 @@ body {
 .contact-form-section,
 .contact-icons-section {
   background-color: var(--purple);
+  margin: 0;
+  padding: 0;
 }
 
 .contact-icons-row {
