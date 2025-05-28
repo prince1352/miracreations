@@ -1154,7 +1154,9 @@ body {
   }
 
   .contact-form button:hover {
-    background-color: #e0b800;
+    background-color: transparent;
+    color: var(--yellow);
+    border: 2px solid var(--yellow);
   }
 
 /* --------------------------------------------
