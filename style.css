@@ -1137,6 +1137,7 @@ body {
   padding: 2rem 1rem 4rem;
   max-width: 600px;
   margin: 0 auto;
+  background-color: var(--purple);
 }
 
 .quote-section h2 {
