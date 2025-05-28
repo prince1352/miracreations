@@ -544,8 +544,8 @@ body {
 }
 
 .contact-title {
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -782,7 +782,7 @@ body {
 }
 
 .founder-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 600;
   color: var(--yellow);
   margin-bottom: 20px;
@@ -809,8 +809,8 @@ body {
 }
 
 .testimonial-title {
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 30px;
   color: white;
 }
@@ -899,8 +899,8 @@ body {
 }
 
 .gallery-cta-title {
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 20px;
   color: white;
 }
@@ -1092,7 +1092,8 @@ body {
   }
 
   .contact-hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
@@ -1149,7 +1150,8 @@ body {
 .quote-section h2 {
   color: white;
   margin-bottom: 1.5rem;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .contact-form {
