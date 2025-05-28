@@ -294,6 +294,8 @@ body {
   font-size: 1.3rem;
   font-weight: 300;
   margin: 0;
+  padding: 0px 15%;
+  color: var(--yellow)
 }
 
 .scroll-indicator {
@@ -306,7 +308,7 @@ body {
 }
 
 .scroll-indicator a {
-  color: var(--yellow);
+  color: var(--black);
   text-decoration: none;
   display: flex;
   align-items: center;
