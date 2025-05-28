@@ -1182,27 +1182,10 @@ body {
   border: 2px solid var(--yellow);
 }
 
-.contact-hero,
-.contact-icons-section,
-.contact-form-section {
-  margin: 0;
-  padding: 0;
-  border: none;
-  line-height: 1;
+.contact-iconsform-section {
   background-color: var(--purple);
 }
 
-.contact-hero * {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-}
-
-.contact-icons-section * {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-}
 
 /* --------------------------------------------
    MAIN PAGE MOBILE OPTIMIZATION CODE (1200px)
