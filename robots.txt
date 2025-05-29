@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://miradecorandjewellery.com/sitemap.xml
