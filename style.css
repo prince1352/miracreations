@@ -587,9 +587,9 @@ body {
 
 .footer-seo {
   padding: 1.5rem 2rem;
-  background-color: #f9f9f9; /* Light background that contrasts footer */
+  background-color: var(--black);
   font-size: 0.95rem;
-  color: #252328; /* Matches your --black */
+  color: white;
   line-height: 1.6;
   text-align: center;
 }
@@ -1437,6 +1437,11 @@ body {
     border-radius: 50%; /* Make it a circle */
     background-color: var(--yellow);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-seo {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 
 /* --------------------------------------------
