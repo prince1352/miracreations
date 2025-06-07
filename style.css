@@ -780,8 +780,15 @@ body {
 }
 
 .specialize-logo {
-  height: 60px;
-  width: auto;
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+.specialize-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .specialize-title,
