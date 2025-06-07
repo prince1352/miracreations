@@ -21,9 +21,9 @@
 
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Contact Us | Mira Creations" />
-  <meta property="og:description" content="Reach out to Mira Creations for event decor and jewellery consultations in Edmonton. Request a quote today." />
+  <meta property="og:description" content="Contact Mira Creations for event decor and jewellery consultations in Edmonton. Request a quote today." />
   <meta property="og:image" content="https://miradecorandjewellery.com/images/og-contact.jpg" />
-  <meta property="og:url" content="https://miradecorandjewellery.com/ContactUs/" />
+  <meta property="og:url" content="https://miradecorandjewellery.com/ContactUs" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card Tags -->
@@ -33,7 +33,7 @@
   <meta name="twitter:image" content="https://miradecorandjewellery.com/images/og-contact.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/images/Logo-Purple.jpg" type="image/jpeg" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -41,22 +41,75 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Mira Creations",
-    "image": "https://miradecorandjewellery.com/images/og-contact.jpg",
-    "url": "https://miradecorandjewellery.com/",
+    "image": "https://miradecorandjewellery.com/images/Logo-Purple.jpg",
+    "@id": "https://miradecorandjewellery.com",
+    "url": "https://miradecorandjewellery.com",
     "telephone": "+1-587-709-0058",
     "email": "mira.creations@outlook.com",
+    "areaServed": {
+    "@type": "Place",
+    "name": "Edmonton, Alberta"
+  },
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "",
       "addressLocality": "Edmonton",
       "addressRegion": "AB",
+      "postalCode": "",
       "addressCountry": "CA"
     },
+
+    "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 53.5461,
+    "longitude": -113.4938
+    },
+    
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+
+    
     "sameAs": [
       "https://instagram.com/mira.creations1",
       "https://tiktok.com/@mira.creations1"
-    ]
+    ],
+    "description": "Mira Creations provides luxury event decor and elegant jewellery for weddings, baby showers, and cultural events across Edmonton and nearby communities."
+    
   }
   </script>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://miradecorandjewellery.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact Us",
+      "item": "https://miradecorandjewellery.com/ContactUs/"
+    }
+  ]
+}
+</script>
   
   <!-- Styles and Fonts -->
   <link rel="stylesheet" href="/style.css" />
@@ -68,20 +121,21 @@
 <!-- HEADER AND MENU -->
 <header class="main-header" role="banner">
   <a href="/" class="header-left" aria-label="Mira Creations homepage">
-    <div class="logo-container header-logo-container">
-      <img 
-        src="/images/Logo-Purple.png" 
-        class="welcome-logo purple-logo" 
-        alt="Mira Creations Purple Logo for Weddings and Event Decor and Jewellery in Edmonton" 
-        loading="lazy" 
-        aria-hidden="true" />
-      <img 
-        src="/images/Logo-Black.png" 
-        class="welcome-logo black-logo" 
-        alt="Elegant Black Mira Creations Logo for Wedding Decor Business" 
-        loading="lazy" 
-        aria-hidden="true" />
+       <div class="logo-container header-logo-container">
+
+  <picture class="purple-logo welcome-logo">
+    <source srcset="images/Logo-Purple.webp" type="image/webp">
+    <source srcset="images/Logo-Purple.png" type="image/png">
+    <img src="images/Logo-Purple.png" alt="Mira Creations logo - Event Decor and Jewellery in Edmonton" loading="lazy">
+  </picture>
+
+  <picture class="black-logo welcome-logo" aria-hidden="true">
+    <source srcset="images/Logo-Black.webp" type="image/webp">
+    <source srcset="images/Logo-Black.png" type="image/png">
+    <img src="images/Logo-Black.png" alt="Mira Creations logo" loading="lazy">
+  </picture>
     </div>
+    
     <div class="brand-text">
       <div class="brand-title">MIRA CREATIONS</div>
       <div class="brand-subtitle">JEWELLERY AND DECOR</div>
@@ -89,16 +143,16 @@
   </a>
 
   <nav class="main-nav" role="navigation" aria-label="Main menu">
-    <a href="/">Home</a>
-    <a href="/AboutUs/">About Us</a>
-    <a href="/Gallery/">Gallery</a>
-    <a href="/ContactUs/">Contact Us</a>
+    <a href="/" title = "Mira Creations - event decor in Edmonton Homepage">Home</a>
+    <a href="AboutUs/" title = "Learn about Mira Creations and how we began event decor in Edmonton">About Us</a>
+    <a href="Gallery/" title="View Mira Creations Indian wedding decor and jewellery gallery in Edmonton">Gallery</a>
+    <a href="ContactUs/" title="Contact Mira Creations for your event decor needs in Edmonton">Contact Us</a>
   </nav>
 
   <div class="header-right">
     <button class="quote-button" 
             onclick="window.location.href='/ContactUs/'" 
-            aria-label="Request a free quote from Mira Creations">
+            aria-label="Mira Creations - Request a free quote">
       Free Quote
     </button>
   </div>
@@ -113,7 +167,7 @@
 
 <!-- CONTACT PAGE SECTION -->
 <section class="contact-hero" role="region" aria-label="Contact Mira Creations in Edmonton">
-  <h1>Contact Us</h1>
+  <h1>Contact Mira Creations</h1>
   <p>Let us help make your event unforgettable. Contact Mira Creations in Edmonton for expert event decor and jewellery services. Request your free quote today.</p>
 
   <!-- CONTACT ICON ROW -->
@@ -150,29 +204,33 @@
 </section>
   
 <!-- FOOTER SECTION -->
-<footer class="site-footer" role="contentinfo" aria-label="Website footer">
+<footer class="site-footer" role="contentinfo" aria-label="Mira Creations footer">
   <div class="footer-content">
     <p>&copy; <span id="year">2025</span> Mira Creations. All rights reserved.</p>
     
     <nav class="footer-links" aria-label="Footer navigation">
-      <a href="/">Home</a>
-      <a href="/AboutUs/">About</a>
-      <a href="/Gallery/">Gallery</a>
-      <a href="/ContactUs/">Contact Us</a>
+      <a href="/" title = "Mira Creations - event decor in Edmonton Homepage">Home</a>
+      <a href="AboutUs/" title = "Learn about Mira Creations and how we began event decor in Edmonton">About Us</a>
+      <a href="Gallery/" title="View Mira Creations Indian wedding decor and jewellery gallery in Edmonton">Gallery</a>
+      <a href="ContactUs/" title="Contact Mira Creations for your event decor needs in Edmonton">Contact Us</a>
     </nav>
   </div>
-</footer>
 
+<section class="footer-seo" aria-label="Local Event Decor in Edmonton">
+  <p>Mira Creations is proud to serve Edmonton and the surrounding communities. Whether you're searching for wedding decor in Edmonton, Indian bridal jewellery, or custom backdrops, Mira Creations is your trusted partner for unforgettable events.</p>
+</section>
+
+</footer>
 
 <!-- MOBILE HEADER/MENU -->
 <div class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile menu">
   <nav class="mobile-menu-links">
-    <a href="/">Home</a>
-    <a href="/AboutUs/">About Us</a>
-    <a href="/Gallery/">Gallery</a>
-    <a href="/ContactUs/">Contact Us</a>
+    <a href="/" title = "Mira Creations - event decor in Edmonton Homepage">Home</a>
+    <a href="AboutUs/" title = "Learn about Mira Creations and how we began event decor in Edmonton">About Us</a>
+    <a href="Gallery/" title="View Mira Creations Indian wedding decor and jewellery gallery in Edmonton">Gallery</a>
+    <a href="ContactUs/" title="Contact Mira Creations for your event decor needs in Edmonton">Contact Us</a>
     <button class="mobile-quote-button" 
-            onclick="window.location.href='/ContactUs/'" 
+            onclick="window.location.href='ContactUs/'" 
             aria-label="Request a free quote from Mira Creations">
       Free Quote
     </button>
