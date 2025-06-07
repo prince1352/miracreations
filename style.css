@@ -835,7 +835,7 @@ body {
   flex-wrap: wrap;
 }
 
-.founder-image img {
+.founder-image picture img {
   max-width: 350px;
   width: 100%;
   border-radius: 16px;
@@ -1074,7 +1074,7 @@ body {
   width: max-content;
 }
 
-.carousel img {
+.carousel picture img {
   height: 280px;
   width: 380px;
   object-fit: cover;
@@ -1084,7 +1084,7 @@ body {
   border-radius: 8px;
 }
 
-.carousel img:hover {
+.carousel picture:hover img {
   transform: scale(1.08);
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 }
@@ -1511,7 +1511,7 @@ body {
     gap: 30px;
   }
 
-  .founder-image img {
+  .founder-image picture img {
     max-width: 80%;
     margin: 0 auto;
   }
@@ -1629,7 +1629,7 @@ body {
  GALLERY PAGE MOBILE OPTIMIZATION CODE (768px)
 ----------------------------------------------*/
 
- .carousel img.clone {
+ .carousel picture img.clone {
     display: none;
   }
 
@@ -1644,19 +1644,19 @@ body {
   }
 
   /* Uniform size for all images + stretch */
-  .carousel img {
-    width: 100%;
-    height: 160px; /* or whatever height looks good on your layout */
-    object-fit: fill; /* stretch to fill entire box */
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+  .carousel picture img {
+  width: 100%;
+  height: 160px;
+  object-fit: fill;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  .carousel img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 3px 12px rgba(255, 255, 255, 0.3);
-  }
+  .carousel picture:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.3);
+}
 
   .gallery-category h2 {
     text-align: center;
