@@ -118,19 +118,20 @@
 <header class="main-header" role="banner">
   <a href="/" class="header-left" aria-label="Mira Creations homepage">
     <div class="logo-container header-logo-container">
-      <img 
-        src="images/Logo-Purple.png" 
-        class="welcome-logo purple-logo" 
-        alt="Mira Creations Logo for Weddings and Event Decor and Jewellery in Edmonton" 
-        loading="lazy" 
-        aria-hidden="true" />
-      <img 
-        src="images/Logo-Black.png" 
-        class="welcome-logo black-logo" 
-        alt="Mira Creations Logo for Wedding and Event Decor and Jewellery in Edmonton" 
-        loading="lazy" 
-        aria-hidden="true" />
+
+  <picture class="purple-logo welcome-logo">
+    <source srcset="images/Logo-Purple.webp" type="image/webp">
+    <source srcset="images/Logo-Purple.png" type="image/png">
+    <img src="images/Logo-Purple.png" alt="Mira Creations logo - Event Decor and Jewellery in Edmonton" loading="lazy">
+  </picture>
+
+  <picture class="black-logo welcome-logo" aria-hidden="true">
+    <source srcset="images/Logo-Black.webp" type="image/webp">
+    <source srcset="images/Logo-Black.png" type="image/png">
+    <img src="images/Logo-Black.png" alt="" loading="lazy">
+  </picture>
     </div>
+    
     <div class="brand-text">
       <div class="brand-title">MIRA CREATIONS</div>
       <div class="brand-subtitle">JEWELLERY AND DECOR</div>
