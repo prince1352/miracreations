@@ -58,6 +58,7 @@ body {
   left: 0;
   width: 100%;
   max-width: 500px;
+  height: auto;
   transition: opacity 1.2s ease;
 }
 
