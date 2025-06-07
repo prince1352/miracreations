@@ -681,6 +681,13 @@ body {
   padding: 0;
 }
 
+.contact-arrow-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 /* Overlay */
 .contact-overlay {
   position: fixed;
