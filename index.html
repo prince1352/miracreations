@@ -327,13 +327,17 @@
     <meta itemprop="url" content="https://miradecorandjewellery.com" />
     <meta itemprop="image" content="https://miradecorandjewellery.com/images/Logo-Purple.png" />
 
-    <form action="https://formsubmit.io/send/mira.creations@outlook.com" method="POST" class="contact-form">
+    <form action="https://formsubmit.co/mira.creations@outlook.com" method="POST" class="contact-form">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <input type="tel" name="phone" placeholder="Your Phone Number" required />
       <textarea name="message" placeholder="Tell us about your event or jewelry needs" required></textarea>
       <button type="submit">Send Mira Creations a Message</button>
     </form>
+
+    <div id="thankYouMessage" style="display: none; color: white; margin-top: 20px; font-size: 1.1rem;">
+      Thank you for contacting Mira Creations. We will reach out to connect for event decoration or jewellery need shortly!
+    </div>
     
   </div>
 </section>
@@ -492,7 +496,32 @@
   });
 </script>
 
+<!-- FORM SUBMIT SCRIPTS -->
 
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent the default form submission behavior
+    const form = this;
+
+    // Send the form data manually via fetch
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("thankYouMessage").style.display = "block";
+      } else {
+        alert("There was an issue sending your message. Please try again.");
+      }
+    }).catch(() => {
+      alert("Something went wrong. Please check your connection and try again.");
+    });
+  });
+</script>
   
 </body>
 </html>
