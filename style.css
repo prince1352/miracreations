@@ -343,6 +343,12 @@ body {
   position: absolute;
 }
 
+.welcome-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* --------------------------------------------
                 WHY US SECTION
 ----------------------------------------------*/
